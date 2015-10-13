@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<properties>
+<comment>Raid config</comment>
+
+<!-- 時の歪みのシステムを本鯖と同様に稼働させるかどうか -->
+<!-- true : 本鯖と同じように稼働する。 -->
+<!-- false : 本鯖で歪みが出現する9ヵ所に歪みが出現し、テレポート先も入るごとにランダムになる -->
+<entry key="Distortions">true</entry>
+
+<!-- 次回の歪みが何分後に開くかを指定（分） デフォルトでは2日後 -->
+<entry key="NextDistortionTime">2880</entry>
+
+<!-- 時の歪みが開いてから祭壇入場可能までの時間を指定（分） -->
+<entry key="DistortionRaidOpenTime">150</entry>
+
+<!-- 祭壇入場可能からボス討伐までのタイムリミットを指定（分） -->
+<!-- 30を指定すると祭壇入場から30分以内にボスを討伐しなければならない。必ず1以上を指定 -->
+<entry key="DistortionRaidBossLimit">30</entry>
+
+<!-- ボス討伐後、歪みが開いている時間を指定（分） -->
+<entry key="DistortionExtendTime">1440</entry>
+
+<!-- ドラゴンキー各種の販売値段の設定（アデナ） -->
+<entry key="DragonKeyPrice">10000000</entry>
+
+<!-- ドルーガバッグの販売値段の設定（アデナ） -->
+<entry key="DrugaBagPrice">100000</entry>
+
+<!-- ドラゴンレイドの血痕の時間を設定(分) -->
+<entry key="DragonSlayserInterval">4320</entry>
+
+</properties>

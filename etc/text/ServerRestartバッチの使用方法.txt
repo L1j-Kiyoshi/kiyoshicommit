@@ -1,0 +1,49 @@
+ServerRestart.batは、Windows Vista以降で利用可能なバッチファイルです。
+サーバーを終了するとともに、ワークスペースからjarファイルを移動し、サーバーを起動します。
+
+まず、ServerRestart.batを利用するには、設定が必要なので、メモ帳などで開いてください。
+
+set filemove=
+set workdrive=
+set workspace=
+set serverdrive=
+set serverfolder=
+
+
+この各項目を設定します。
+ダブルクォーテーション等は要らないです。
+filemove　・・・・・・　ファイル移動機能を有効にするかどうか。0で移動しない。1で移動する。
+workdrive　・・・・・・　eclipse等で使用しているワークスペースがあるドライブの事です。C:やD:等。
+workspace　・・・・・・　eclipse等で使用しているワークスペースのフォルダのパスを指定します。
+　　　　　　　　　　　　 簡単に言うと、ビルドをしたときに「l1jserver.jar」が出来上がるフォルダのパスです。
+serverdrive　・・・・・　実行する「l1jserver.jar」が存在するドライブの事です。　C:やD:等。
+serverfolder ・・・・・　実行する「l1jserver.jar」が存在するフォルダのパスです。
+
+説明が分かりにくいと思うので例を挙げておきます。
+それでも分からない方は「https://code.google.com/p/l1j-jp-relaxedly/」のBBSにて質問どうぞ。
+
+ワークスペースのパスが、「C:\workspace」　で、その中に、「l1j-server」というフォルダがあるとします。
+l1j-serverの中には、ServerStart.batや、「config」フォルダ等があるとします。
+また、サーバーを起動するためのフォルダが「D:\LineAge」の中の、「l1j-server」というフォルダだとします。
+同じくこの「l1j-server」には、ワークスペースの「l1j-server」と同じファイルが入っています。
+サーバーを起動するのは、「D:\LineAge\l1j-server」の中にある、ServerStart.bat　ですので、サーバーの設定はすべて
+「D:\LineAge\l1j-server」の中にある「config」の中身で経験値倍率等を設定しています。
+ただし、eclipse等でJavaをいじってビルドをすると、「C:\workspace\l1j-server」の中に「l1jserver.jar」が生成されます。
+「ServerRestart.bat」の設定は、「D:\LineAge\l1j-server」内にある「ServerRestart.bat」を編集、保存してください。
+このような場合の各設定項目は下記のようになります。
+
+filemove=1
+workdrive=C:
+workspace=workspace\l1j-server
+serverdrive=D:
+serverfolder=LineAge\l1j-server
+
+これで、XMLの自動シャットダウンを有効にし、ServerStart.batを実行すると
+C:\workspace\l1j-server　内にある　「l1jserver.jar」を、サーバーシャットダウン時に
+D:\LineAge\l1j-server　内へ移動、上書きしてからサーバーを起動してくれます。
+C:\workspace\l1j-server　内にl1jserver.jarがない場合は移動はせず、元のl1jserver.jarを起動します。
+
+GMコマンド「.autorestart」で次回シャットダウン時に自動起動するかどうかを指定可能。
+.autorestart true  次回シャットダウン時に自動起動する。
+.autorestart false 次回シャットダウン時に自動起動しない。
+また、server.properties でも設定可能。

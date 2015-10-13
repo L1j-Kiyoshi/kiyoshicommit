@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemEffectList>
+	<!-- 蒸発保護スクロール -->
+	<Item ItemId="50632" Remove="1">
+		<Effect ItemId="276" DownLevel="1" /> <!-- マリス エレメント キーリンク -->
+		<Effect ItemId="277" DownLevel="1" /> <!-- マリス エレメント チェーンソード -->
+		<Effect ItemId="278" DownLevel="1" /> <!-- マリス エレメント クロウ -->
+		<Effect ItemId="279" DownLevel="1" /> <!-- マリス エレメント スタッフ -->
+		<Effect ItemId="280" DownLevel="1" /> <!-- マリス エレメント ボウ -->
+		<Effect ItemId="281" DownLevel="1" /> <!-- マリス エレメント ソード -->
+	</Item>
+	<!-- Tシャツ保護スクロール -->
+	<Item ItemId="50658" Remove="1">
+		<Effect ItemId="21028" DownLevel="0" /> <!-- %iの腕力のTシャツ -->
+		<Effect ItemId="21029" DownLevel="0" /> <!-- %iの機敏のTシャツ -->
+		<Effect ItemId="21030" DownLevel="0" /> <!-- %iの魅力のTシャツ -->
+		<Effect ItemId="21031" DownLevel="0" /> <!-- %iの知力のTシャツ -->
+		<Effect ItemId="21032" DownLevel="0" /> <!-- %iの生命のTシャツ -->
+		<Effect ItemId="21033" DownLevel="0" /> <!-- %iの魔法のTシャツ -->
+		<Effect ItemId="21190" DownLevel="0" /> <!-- %iのスタン耐性のTシャツ -->
+		<Effect ItemId="21191" DownLevel="0" /> <!-- %iのホールド耐性のTシャツ -->
+		<Effect ItemId="21108" DownLevel="0" /> <!-- %iの魔法抵抗のTシャツ -->
+		<Effect ItemId="21192" DownLevel="0" /> <!-- %iの治癒のTシャツ -->
+		<Effect ItemId="21193" DownLevel="0" /> <!-- %iの瞑想のTシャツ -->
+
+		<Effect ItemId="21303" DownLevel="0" /> <!-- %iの腕力の特製Tシャツ -->
+		<Effect ItemId="21304" DownLevel="0" /> <!-- %iの機敏の特製Tシャツ -->
+		<Effect ItemId="21305" DownLevel="0" /> <!-- %iの魅力の特製Tシャツ -->
+		<Effect ItemId="21306" DownLevel="0" /> <!-- %iの知力の特製Tシャツ -->
+		<Effect ItemId="21307" DownLevel="0" /> <!-- %iの生命の特製Tシャツ -->
+		<Effect ItemId="21308" DownLevel="0" /> <!-- %iの魔法の特製Tシャツ -->
+		<Effect ItemId="21309" DownLevel="0" /> <!-- %iのスタン耐性の特製Tシャツ -->
+		<Effect ItemId="21310" DownLevel="0" /> <!-- %iのホールド耐性の特製Tシャツ -->
+		<Effect ItemId="21311" DownLevel="0" /> <!-- %iの魔法抵抗の特製Tシャツ -->
+		<Effect ItemId="21312" DownLevel="0" /> <!-- %iの治癒の特製Tシャツ -->
+		<Effect ItemId="21313" DownLevel="0" /> <!-- %iの瞑想の特製Tシャツ -->
+
+		<Effect ItemId="21314" DownLevel="0" /> <!-- %iの腕力の特製Tシャツ -->
+		<Effect ItemId="21315" DownLevel="0" /> <!-- %iの機敏の特製Tシャツ -->
+		<Effect ItemId="21316" DownLevel="0" /> <!-- %iの魅力の特製Tシャツ -->
+		<Effect ItemId="21317" DownLevel="0" /> <!-- %iの知力の特製Tシャツ -->
+		<Effect ItemId="21318" DownLevel="0" /> <!-- %iの生命の特製Tシャツ -->
+		<Effect ItemId="21319" DownLevel="0" /> <!-- %iの魔法の特製Tシャツ -->
+		<Effect ItemId="21320" DownLevel="0" /> <!-- %iのスタン耐性の特製Tシャツ -->
+		<Effect ItemId="21321" DownLevel="0" /> <!-- %iのホールド耐性の特製Tシャツ -->
+		<Effect ItemId="21322" DownLevel="0" /> <!-- %iの魔法抵抗の特製Tシャツ -->
+		<Effect ItemId="21323" DownLevel="0" /> <!-- %iの治癒の特製Tシャツ -->
+		<Effect ItemId="21324" DownLevel="0" /> <!-- %iの瞑想の特製Tシャツ -->
+
+		<Effect ItemId="21325" DownLevel="0" /> <!-- %iの腕力の特製Tシャツ -->
+		<Effect ItemId="21326" DownLevel="0" /> <!-- %iの機敏の特製Tシャツ -->
+		<Effect ItemId="21327" DownLevel="0" /> <!-- %iの魅力の特製Tシャツ -->
+		<Effect ItemId="21328" DownLevel="0" /> <!-- %iの知力の特製Tシャツ -->
+		<Effect ItemId="21329" DownLevel="0" /> <!-- %iの生命の特製Tシャツ -->
+		<Effect ItemId="21330" DownLevel="0" /> <!-- %iの魔法の特製Tシャツ -->
+		<Effect ItemId="21331" DownLevel="0" /> <!-- %iのスタン耐性の特製Tシャツ -->
+		<Effect ItemId="21332" DownLevel="0" /> <!-- %iのホールド耐性の特製Tシャツ -->
+		<Effect ItemId="21333" DownLevel="0" /> <!-- %iの魔法抵抗の特製Tシャツ -->
+		<Effect ItemId="21334" DownLevel="0" /> <!-- %iの治癒の特製Tシャツ -->
+		<Effect ItemId="21335" DownLevel="0" /> <!-- %iの瞑想の特製Tシャツ -->
+	</Item>
+</ItemEffectList>
