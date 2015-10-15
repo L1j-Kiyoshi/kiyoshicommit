@@ -14,21 +14,19 @@
  */
 package jp.l1j.server.model.skill;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.datatables.SkillTable;
-import jp.l1j.server.model.instance.L1MonsterInstance;
-import jp.l1j.server.model.instance.L1NpcInstance;
-import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.instance.L1PetInstance;
-import jp.l1j.server.model.instance.L1SummonInstance;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.L1PolyMorph;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.item.executor.L1ExtraPotion;
 import jp.l1j.server.model.item.executor.L1FloraPotion;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.executor.L1BuffSkillExecutor;
 import jp.l1j.server.packets.server.S_CurseBlind;
 import jp.l1j.server.packets.server.S_Dexup;
@@ -146,6 +144,12 @@ class L1SkillStop {
 			cha.addDmgup(-2);
 		} else if (skillId == BLESSED_ARMOR) { // ブレスド アーマー
 			cha.addAc(3);
+		} else if (skillId == ERASE_MAGIC) { // イレースマジック
+			if (cha instanceof L1PcInstance) {
+				L1PcInstance pc = (L1PcInstance) cha;
+				pc.sendPackets(new S_SkillIconAura(152, 0));
+				pc.sendPackets(new S_SpMr(pc));
+			}
 		} else if (skillId == EARTH_BLESS) { // アース ブレス
 			cha.addAc(7);
 			if (cha instanceof L1PcInstance) {
