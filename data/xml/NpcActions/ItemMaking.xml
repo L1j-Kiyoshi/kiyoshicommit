@@ -567,6 +567,26 @@
 			<Material Amount="20000" ItemId="40308"/>
 		</MakeItem>
 	</Action>
+	<!-- 魔力のグローブ / ハーバード-->
+	<Action Name="request glove of spell power">
+		<MakeItem>
+			<Item Amount="1" ItemId="21359"/>
+			<Material Amount="1" ItemId="40395"/>
+			<Material Amount="10" ItemId="50564"/>
+			<Material Amount="300" ItemId="41557"/>
+		</MakeItem>
+	</Action>
+	<!-- 輝く魔力のグローブ / ハーバード-->
+	<Action Name="request glove of shining spell power">
+		<MakeItem>
+			<Item Amount="1" ItemId="21360"/>
+			<Material Amount="1" Enchant="7" ItemId="21359"/>
+			<Material Amount="1" ItemId="40395"/>
+			<Material Amount="1" ItemId="41558"/>
+			<Material Amount="10" ItemId="50564"/>
+			<Material Amount="300" ItemId="41557"/>
+		</MakeItem>
+	</Action>
 	<!--極寒のドレスの布地 / エバート-->
 	<Action Name="request arctic fabric">
 		<MakeItem>
@@ -1090,6 +1110,65 @@
 			<Material Amount="50" ItemId="40305"/>
 		</MakeItem>
 	</Action>
+	<!-- 地竜の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of green dragon">
+		<MakeItem>
+			<Item Amount="1" ItemId="50508"/>
+			<Material Amount="100000" ItemId="40308"/>
+			<Material Amount="1" ItemId="50504"/>
+		</MakeItem>
+	</Action>
+	<!-- 水竜の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of blue dragon">
+		<MakeItem>
+			<Item Amount="1" ItemId="50509"/>
+			<Material Amount="100000" ItemId="40308"/>
+			<Material Amount="1" ItemId="50505"/>
+		</MakeItem>
+	</Action>
+	<!-- 風竜の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of yellow dragon">
+		<MakeItem>
+			<Item Amount="1" ItemId="50510"/>
+			<Material Amount="100000" ItemId="40308"/>
+			<Material Amount="1" ItemId="50506"/>
+		</MakeItem>
+	</Action>
+	<!-- 火竜の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of red dragon">
+		<MakeItem>
+			<Item Amount="1" ItemId="50511"/>
+			<Material Amount="100000" ItemId="40308"/>
+			<Material Amount="1" ItemId="50507"/>
+		</MakeItem>
+	</Action>
+	<!-- 誕生の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of birth">
+		<MakeItem>
+			<Item Amount="1" ItemId="50512" Chance="5"/>
+			<Material Amount="1" ItemId="50508"/>
+			<Material Amount="1" ItemId="50509"/>
+			<Material Amount="200000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
+	<!-- 形状の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of shape">
+		<MakeItem>
+			<Item Amount="1" ItemId="50513" Chance="5"/>
+			<Material Amount="1" ItemId="50512"/>
+			<Material Amount="1" ItemId="50510"/>
+			<Material Amount="200000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
+	<!-- 生命の魔眼 / アイテム制作師 シュエルメ -->
+	<Action Name="request magic eye of life">
+		<MakeItem>
+			<Item Amount="1" ItemId="50514" Chance="5"/>
+			<Material Amount="1" ItemId="50513"/>
+			<Material Amount="1" ItemId="50511"/>
+			<Material Amount="200000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
 	<!--ボーン ヘルム / 骨細工師-->
 	<Action Name="request skull helmet">
 		<MakeItem>
@@ -1541,6 +1620,42 @@
 			<Material Amount="100" ItemId="40404"/>
 			<Material Amount="3" ItemId="40396"/>
 			<Material Amount="100000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
+	<!--腕力のブーツ / バミュト-->
+	<Action Name="request str of boots">
+		<MakeItem>
+			<Item Amount="1" ItemId="21372"/>
+			<Material Amount="5" ItemId="40393"/>
+			<Material Amount="10" ItemId="40053"/>
+			<Material Amount="50" ItemId="50564"/>
+		</MakeItem>
+	</Action>
+	<!--知恵のブーツ / バミュト-->
+	<Action Name="request wis of boots">
+		<MakeItem>
+			<Item Amount="1" ItemId="21373"/>
+			<Material Amount="5" ItemId="40396"/>
+			<Material Amount="10" ItemId="40052"/>
+			<Material Amount="50" ItemId="50564"/>
+		</MakeItem>
+	</Action>
+	<!--機敏のブーツ / バミュト-->
+	<Action Name="request dex of boots">
+		<MakeItem>
+			<Item Amount="1" ItemId="21374"/>
+			<Material Amount="5" ItemId="40394"/>
+			<Material Amount="10" ItemId="40055"/>
+			<Material Amount="50" ItemId="50564"/>
+		</MakeItem>
+	</Action>
+	<!--知力のブーツ / バミュト-->
+	<Action Name="request int of boots">
+		<MakeItem>
+			<Item Amount="1" ItemId="21375"/>
+			<Material Amount="5" ItemId="40395"/>
+			<Material Amount="10" ItemId="40054"/>
+			<Material Amount="50" ItemId="50564"/>
 		</MakeItem>
 	</Action>
 	<!--触媒抽出の袋 / 魔法の触媒 錬金術師-->
@@ -4062,6 +4177,229 @@
 			<Fail>
 				<ShowHtml HtmlId="jp5"/>
 			</Fail>
+		</MakeItem>
+	</Action>
+	<!-- ＋０ゲイル アックス / ゾウのラヴァゴーレム-->
+	<Action Name="request axe of gale0">
+		<MakeItem>
+			<Item Amount="1" ItemId="385"/>
+			<Material Amount="1" Enchant="8" ItemId="260"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋８ゲイル アックス / ゾウのラヴァゴーレム-->
+	<Action Name="request axe of gale8">
+		<MakeItem>
+			<Item Amount="1" Enchant="8" ItemId="385"/>
+			<Material Amount="1" Enchant="9" ItemId="260"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋０魔物のアックス / ゾウのラヴァゴーレム-->
+	<Action Name="request axe of apparition0">
+		<MakeItem>
+			<Item Amount="1" ItemId="386"/>
+			<Material Amount="1" Enchant="0" ItemId="151"/>
+			<Material Amount="200000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋１魔物のアックス / ゾウのラヴァゴーレム-->
+	<Action Name="request axe of apparition1">
+		<MakeItem>
+			<Item Amount="1" Enchant="1" ItemId="386"/>
+			<Material Amount="1" Enchant="3" ItemId="151"/>
+			<Material Amount="200000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋３魔物のアックス / ゾウのラヴァゴーレム-->
+	<Action Name="request axe of apparition3">
+		<MakeItem>
+			<Item Amount="1" Enchant="3" ItemId="386"/>
+			<Material Amount="1" Enchant="5" ItemId="151"/>
+			<Material Amount="200000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋０マジック プロテクション プレート メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection plate armor0">
+		<MakeItem>
+			<Item Amount="1" ItemId="21368"/>
+			<Material Amount="1" ItemId="20095"/>
+			<Material Amount="1" Enchant="7" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋０マジック プロテクション スケイル メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection scale armor0">
+		<MakeItem>
+			<Item Amount="1" ItemId="21369"/>
+			<Material Amount="1" ItemId="20094"/>
+			<Material Amount="1" Enchant="7" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋０マジック プロテクション レザー アーマー / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection leather armor0">
+		<MakeItem>
+			<Item Amount="1" ItemId="21370"/>
+			<Material Amount="1" ItemId="20092"/>
+			<Material Amount="1" Enchant="7" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋０マジック プロテクション ローブ / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection robe0">
+		<MakeItem>
+			<Item Amount="1" ItemId="21371"/>
+			<Material Amount="1" ItemId="20093"/>
+			<Material Amount="1" Enchant="7" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋１マジック プロテクション プレート メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection plate armor1">
+		<MakeItem>
+			<Item Amount="1" Enchant="1" ItemId="21368"/>
+			<Material Amount="1" ItemId="20095"/>
+			<Material Amount="1" Enchant="8" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋１マジック プロテクション スケイル メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection scale armor1">
+		<MakeItem>
+			<Item Amount="1" Enchant="1" ItemId="21369"/>
+			<Material Amount="1" ItemId="20094"/>
+			<Material Amount="1" Enchant="8" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋１マジック プロテクション レザー アーマー / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection leather armor1">
+		<MakeItem>
+			<Item Amount="1" Enchant="1" ItemId="21370"/>
+			<Material Amount="1" ItemId="20092"/>
+			<Material Amount="1" Enchant="8" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋１マジック プロテクション ローブ / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection robe1">
+		<MakeItem>
+			<Item Amount="1" Enchant="1" ItemId="21371"/>
+			<Material Amount="1" ItemId="20093"/>
+			<Material Amount="1" Enchant="8" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋２マジック プロテクション プレート メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection plate armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="2" ItemId="21368"/>
+			<Material Amount="1" ItemId="20095"/>
+			<Material Amount="1" Enchant="9" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋２マジック プロテクション スケイル メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection scale armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="2" ItemId="21369"/>
+			<Material Amount="1" ItemId="20094"/>
+			<Material Amount="1" Enchant="9" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋２マジック プロテクション レザー アーマー / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection leather armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="2" ItemId="21370"/>
+			<Material Amount="1" ItemId="20092"/>
+			<Material Amount="1" Enchant="9" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋２マジック プロテクション ローブ / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection robe2">
+		<MakeItem>
+			<Item Amount="1" Enchant="2" ItemId="21371"/>
+			<Material Amount="1" ItemId="20093"/>
+			<Material Amount="1" Enchant="9" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋３マジック プロテクション プレート メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection plate armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="3" ItemId="21368"/>
+			<Material Amount="1" ItemId="20095"/>
+			<Material Amount="1" Enchant="10" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋３マジック プロテクション スケイル メイル / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection scale armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="3" ItemId="21369"/>
+			<Material Amount="1" ItemId="20094"/>
+			<Material Amount="1" Enchant="10" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋３マジック プロテクション レザー アーマー / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection leather armor2">
+		<MakeItem>
+			<Item Amount="1" Enchant="3" ItemId="21370"/>
+			<Material Amount="1" ItemId="20092"/>
+			<Material Amount="1" Enchant="10" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ＋３マジック プロテクション ローブ / ゾウのラヴァゴーレム-->
+	<Action Name="request magic protection robe2">
+		<MakeItem>
+			<Item Amount="1" Enchant="3" ItemId="21371"/>
+			<Material Amount="1" ItemId="20093"/>
+			<Material Amount="1" Enchant="10" ItemId="20110"/>
+			<Material Amount="100000" ItemId="41246"/>
+		</MakeItem>
+	</Action>
+	<!-- ダークネス クロウ / カリフ-->
+	<Action Name="request darkness claw">
+		<MakeItem>
+			<Item Amount="1" ItemId="164"/>
+			<Material Amount="1" ItemId="162"/>
+			<Material Amount="3" ItemId="40525"/>
+			<Material Amount="9" ItemId="40413"/>
+			<Material Amount="10" ItemId="40404"/>
+			<Material Amount="3" ItemId="40055"/>
+			<Material Amount="1" ItemId="40466"/>
+			<Material Amount="100000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
+	<!-- ダークネス デュアルブレード / カリフ-->
+	<Action Name="request darkness dualblade">
+		<MakeItem>
+			<Item Amount="1" ItemId="84"/>
+			<Material Amount="1" ItemId="81"/>
+			<Material Amount="3" ItemId="40525"/>
+			<Material Amount="9" ItemId="40413"/>
+			<Material Amount="10" ItemId="40402"/>
+			<Material Amount="3" ItemId="40053"/>
+			<Material Amount="1" ItemId="40466"/>
+			<Material Amount="100000" ItemId="40308"/>
+		</MakeItem>
+	</Action>
+	<!-- ダークネス クロスボウ / カリフ-->
+	<Action Name="request darkness crossbow">
+		<MakeItem>
+			<Item Amount="1" ItemId="189"/>
+			<Material Amount="1" ItemId="177"/>
+			<Material Amount="3" ItemId="40525"/>
+			<Material Amount="9" ItemId="40413"/>
+			<Material Amount="10" ItemId="40403"/>
+			<Material Amount="3" ItemId="40054"/>
+			<Material Amount="1" ItemId="40466"/>
+			<Material Amount="100000" ItemId="40308"/>
 		</MakeItem>
 	</Action>
 </NpcActionList>

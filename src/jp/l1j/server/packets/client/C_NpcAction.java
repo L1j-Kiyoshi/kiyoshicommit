@@ -15,13 +15,19 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.GeneralThreadPool;
+import jp.l1j.server.controller.raid.KukulcanRaidController;
+import jp.l1j.server.controller.raid.ThebesRaidController;
 import jp.l1j.server.controller.timer.HomeTownTimeController;
 import jp.l1j.server.controller.timer.IceQueenCastleController;
 import jp.l1j.server.controller.timer.UltimateBattleController;
@@ -75,9 +81,19 @@ import jp.l1j.server.model.inventory.L1PcInventory;
 import jp.l1j.server.model.item.L1ItemId;
 import jp.l1j.server.model.item.executor.L1BeginnerItem;
 import jp.l1j.server.model.npc.L1NpcHtml;
-import jp.l1j.server.model.npc.action.L1NpcAction;
+import jp.l1j.server.model.npc.action.L1CreateNpcHandler;
 import jp.l1j.server.model.npc.action.L1EventNpcAction;
-import jp.l1j.server.model.npc.action.individual.*;
+import jp.l1j.server.model.npc.action.L1NpcAction;
+import jp.l1j.server.model.npc.action.individual.L1BossKeyNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1EnchantOfComaActions;
+import jp.l1j.server.model.npc.action.individual.L1GolemOfLavaActions;
+import jp.l1j.server.model.npc.action.individual.L1HinomotoNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1HosterityWeaponNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1IceQueenCastleNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1LastavardNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1OpenSlotNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1PiersNpcActions;
+import jp.l1j.server.model.npc.action.individual.L1VeilActions;
 import jp.l1j.server.model.skill.L1BuffUtil;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.packets.server.S_ApplyAuction;
@@ -104,16 +120,14 @@ import jp.l1j.server.packets.server.S_RetrievePledgeList;
 import jp.l1j.server.packets.server.S_SelectTarget;
 import jp.l1j.server.packets.server.S_SellHouse;
 import jp.l1j.server.packets.server.S_ServerMessage;
-import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.packets.server.S_ShopBuyList;
 import jp.l1j.server.packets.server.S_ShopSellList;
 import jp.l1j.server.packets.server.S_SkillHaste;
 import jp.l1j.server.packets.server.S_SkillIconAura;
 import jp.l1j.server.packets.server.S_SkillIconGFX;
 import jp.l1j.server.packets.server.S_SkillSound;
+import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.packets.server.S_TaxRate;
-import jp.l1j.server.controller.raid.ThebesRaidController;
-import jp.l1j.server.controller.raid.KukulcanRaidController;
 import jp.l1j.server.random.RandomGenerator;
 import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1Castle;
@@ -124,9 +138,6 @@ import jp.l1j.server.templates.L1Npc;
 import jp.l1j.server.templates.L1RaidConfig;
 import jp.l1j.server.templates.L1Skill;
 import jp.l1j.server.templates.L1Town;
-
-import static jp.l1j.server.model.skill.L1SkillId.*;
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class C_NpcAction extends ClientBasePacket {
 
@@ -281,7 +292,8 @@ public class C_NpcAction extends ClientBasePacket {
 				// 買い取りリスト表示
 				pc.sendPackets(new S_ShopBuyList(objid, pc));
 			}
-			// TODO アライメント回復
+		} else if (s.equalsIgnoreCase("request craft")) { // XXX 作製NPC系はすべてL1CreateNpcHandlerで処理
+			htmlid = L1CreateNpcHandler.getInstance().getReturnTalk(npcTemp.getNpcId());
 		} else if (npcTemp.getNpcId() == 80166) { // 善の使者
 			// ユリウス
 			if (s.equalsIgnoreCase("0")) {
