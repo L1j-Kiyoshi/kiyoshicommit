@@ -273,7 +273,7 @@ SELECT 'id','account_id','name','birthday','level','high_level','exp','max_hp',^
 'cur_hp','max_mp','cur_mp','ac','str','con','dex','cha','int','wis','status',^
 'class','sex','type','heading','loc_x','loc_y','map_id','food','lawful',^
 'title','clan_id','clan_name','clan_rank','bonus_status','elixir_status',^
-'elf_attr','pk_count','kill_count','death_count','exp_res','partner_id','access_level',^
+'elf_attr','pk_count','pk_count_for_elf','kill_count','death_count','exp_res','partner_id','access_level',^
 'online_status','hometown_id','contribution','pay','hell_time','is_active',^
 'karma','last_pk','last_pk_for_elf','delete_time','rejoin_clan_time',^
 'original_str','original_con','original_dex','original_cha','original_int',^
