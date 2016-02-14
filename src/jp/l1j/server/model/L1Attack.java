@@ -103,7 +103,7 @@ public class L1Attack {
 
 	private int _attckActId = 0;
 
-	// 攻撃者がプレイヤーの場合の武器情報 テストコミット
+	// 攻撃者がプレイヤーの場合の武器情報 テスト
 	private L1ItemInstance weapon = null;
 
 	private int _weaponId = 0;
