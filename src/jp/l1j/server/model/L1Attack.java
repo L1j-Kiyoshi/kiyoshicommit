@@ -103,7 +103,7 @@ public class L1Attack {
 
 	private int _attckActId = 0;
 
-	// 攻撃者がプレイヤーの場合の武器情報 テスト
+	// 攻撃者がプレイヤーの場合の武器情報
 	private L1ItemInstance weapon = null;
 
 	private int _weaponId = 0;
@@ -755,7 +755,7 @@ public class L1Attack {
 		int fumble = _hitRate;
 		int critical = _hitRate + 19;
 
-		if (attackerDice <= fumble) {
+		if (attackerDice <= fumble) { // 回避判定
 			_hitRate = 0;
 		} else if (attackerDice >= critical) {
 			_hitRate = 100;
@@ -1047,7 +1047,9 @@ public class L1Attack {
 		if (_targetPc.hasSkillEffect(PATIENCE)) {
 			dmg -= 2;
 		}
-
+		if (dmg <= 0 ) { //ダメージが０以下の場合は仰け反りなし
+			_isHit = false;
+		}
 		if (_targetPc.hasSkillEffect(SHIELD_OF_TEAIROR)) { // 反逆者のシールド
 			if (_random.nextInt(100) <= _targetPc.getTeairorChance()) {
 				dmg -= 50;
@@ -1530,6 +1532,9 @@ public class L1Attack {
 		}
 		if (_targetPc.isThroughAttack()) {
 			dmg = 0;
+		}
+		if (dmg <= 0 ) { //ダメージが０以下の場合は仰け反りなし
+			_isHit = false;
 		}
 
 		// ペット、サモンからプレイヤーに攻撃
