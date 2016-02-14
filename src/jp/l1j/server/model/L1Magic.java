@@ -14,8 +14,11 @@
  */
 package jp.l1j.server.model;
 
-import java.text.MessageFormat;
 import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
+import java.text.MessageFormat;
+
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.controller.timer.WarTimeController;
 import jp.l1j.server.datatables.SkillTable;
@@ -24,7 +27,6 @@ import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.instance.L1PetInstance;
 import jp.l1j.server.model.instance.L1SummonInstance;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 import jp.l1j.server.packets.server.S_SkillSound;
 import jp.l1j.server.packets.server.S_SystemMessage;
@@ -943,11 +945,6 @@ public class L1Magic {
 		if (_calcType == PC_PC || _calcType == PC_NPC) { // オリジナルINTによる魔法ダメージ
 			magicDamage += _pc.getOriginalMagicDamage();
 		}
-		if (_calcType == PC_PC || _calcType == PC_NPC) { // アバターによる追加ダメージ
-			if (_pc.hasSkillEffect(ILLUSION_AVATAR)) {
-				magicDamage += 10;
-			}
-		}
 
 		return magicDamage;
 	}
@@ -1240,8 +1237,12 @@ public class L1Magic {
 			dmg = (int) (l1skills.getDamageValue() * sp);
 		} else if (skillId == JOY_OF_PAIN) { // ジョイオブペイン
 			dmg = ((_pc.getMaxHp() - _pc.getCurrentHp()) / 5);
-		}
 
+		}else if (_calcType == PC_PC || _calcType == PC_NPC) { // アバターによる追加ダメージ
+			if (_pc.hasSkillEffect(ILLUSION_AVATAR)) {
+				dmg += 10;
+			}
+		}
 		return dmg;
 	}
 }
