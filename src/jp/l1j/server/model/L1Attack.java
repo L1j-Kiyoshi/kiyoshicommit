@@ -15,10 +15,13 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.text.MessageFormat;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.controller.timer.WarTimeController;
 import jp.l1j.server.datatables.SkillTable;
@@ -31,7 +34,6 @@ import jp.l1j.server.model.instance.L1SummonInstance;
 import jp.l1j.server.model.poison.L1DamagePoison;
 import jp.l1j.server.model.poison.L1ParalysisPoison;
 import jp.l1j.server.model.poison.L1SilencePoison;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.model.skill.executor.L1CounterBarrier;
 import jp.l1j.server.packets.server.S_AttackMissPacket;
@@ -101,7 +103,7 @@ public class L1Attack {
 
 	private int _attckActId = 0;
 
-	// 攻撃者がプレイヤーの場合の武器情報
+	// 攻撃者がプレイヤーの場合の武器情報 テストコミット
 	private L1ItemInstance weapon = null;
 
 	private int _weaponId = 0;
