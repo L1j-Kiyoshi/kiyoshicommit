@@ -1112,11 +1112,15 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getPotionRecoveryRate(getEnchantLevel());
 		}
 
-		if (getItemId() == 21353) { // ルームティス ブルー イアリング
-			if (getEnchantLevel() > 0) {
-				result += getEnchantLevel() * 2 + 2;
-			}
-		}
+		if (getItemId() == 21353 && getEnchantLevel() == 0) { // +0 ルームティス ブルー イアリング 割合回復
+			result += 2;
+
+
+
+	} else if (getItemId() == 21353 && getEnchantLevel() > 0) { // ルームティス ブルー イアリング 割合回復
+			result += ((getEnchantLevel() + 1) * 2);
+
+	}
 
 		return result;
 	}

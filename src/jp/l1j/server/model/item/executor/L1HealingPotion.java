@@ -202,10 +202,19 @@ public class L1HealingPotion {
 			healHp += _random.nextInt(chance) + 1;
 		}
 
-		if (pc.getInventory().checkEquipped(21353)) { // ルームティス ブルー イアリング
+		if (pc.getInventory().checkEquipped(21353)) {// +0 ルームティス ブルー イアリング 固定値回復
 			int enchantLevel = pc.getInventory().getItemEquipped(2, 12).getEnchantLevel();
+			if (enchantLevel == 0) {
+			healHp += 2;
+		}
+	}
+
+			if (pc.getInventory().checkEquipped(21353)) {// ルームティス ブルー イアリング 固定値回復
+			int enchantLevel = pc.getInventory().getItemEquipped(2, 12).getEnchantLevel();
+			if (enchantLevel > 0) {
 			healHp += 2 + ((enchantLevel + 1) * 2);
 		}
+	}
 
 		healHp *= (double)pc.getPotionRecoveryRatePct() / 100 + 1;
 
