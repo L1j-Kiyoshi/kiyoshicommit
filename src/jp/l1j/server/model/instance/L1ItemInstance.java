@@ -15,6 +15,9 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.item.L1ItemOptionId.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.sql.Connection;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -22,8 +25,8 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import jp.l1j.configure.Config;
-import jp.l1j.server.datatables.ArmorSetTable;
 import jp.l1j.server.datatables.InnKeyTable;
 import jp.l1j.server.datatables.ItemTable;
 import jp.l1j.server.datatables.NpcTable;
@@ -35,10 +38,8 @@ import jp.l1j.server.model.L1ExpirationTimer;
 import jp.l1j.server.model.L1ItemOwnerTimer;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1World;
-import static jp.l1j.server.model.item.L1ItemOptionId.*;
 import jp.l1j.server.model.item.executor.L1EnchantBonus;
 import jp.l1j.server.model.item.executor.L1SpellIcon;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_OwnCharStatus;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.random.RandomGenerator;
@@ -638,6 +639,12 @@ public class L1ItemInstance extends L1Object {
 				result += (getEnchantLevel() - 1) / 2;
 			}
 		}
+
+		if (_item.getItemId() == 20107 || _item.getItemId() == 120107) { // リッチローブ
+		    if (getEnchantLevel() >= 3) {
+		    	result += (getEnchantLevel() - 2);
+		   }
+		  }
 
 		return result;
 	}
