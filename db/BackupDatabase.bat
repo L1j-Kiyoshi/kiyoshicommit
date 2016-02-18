@@ -22,9 +22,9 @@ echo Backup the database...
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: MySQL Config
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-set database=l1jdb
+set database=commitl1jdb
 set username=root
-set password=""
+set password="20101101"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: CSV Config
@@ -698,7 +698,7 @@ echo %outdir%/%datetime%/npcs.csv
 set query=^
 SELECT 'id','name','name_id','note','impl','gfx_id','level','hp','mp','ac',^
 'str','con','dex','wis','int','mr','resist_earth','resist_fire','resist_water', ^
-'resist_wind','resist_light','exp','lawful','size','weak_attr','atk_act_id','ranged',^
+'resist_wind','resist_light','through_area','exp','lawful','size','weak_attr','atk_act_id','ranged',^
 'tamable','move_speed','atk_speed','alt_atk_speed','atk_magic_speed',^
 'sub_magic_speed','undead','poison_atk','poison_interval','poison_damage','paralysis_atk',^
 'agro','agro_sosc','agro_coi','family','agro_family','agro_gfx_id1','agro_gfx_id2','pickup_item',^

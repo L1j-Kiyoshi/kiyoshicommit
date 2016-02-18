@@ -15,6 +15,9 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.item.L1ItemId.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -25,6 +28,7 @@ import java.util.TimerTask;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.codes.ActionCodes;
@@ -48,13 +52,10 @@ import jp.l1j.server.model.L1Spawn;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.inventory.L1GroundInventory;
 import jp.l1j.server.model.inventory.L1Inventory;
-import static jp.l1j.server.model.item.L1ItemId.*;
 import jp.l1j.server.model.map.L1Map;
 import jp.l1j.server.model.map.L1WorldMap;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.model.skill.executor.L1CounterBarrier;
-import jp.l1j.server.model.skill.executor.L1DivineProtectionOfLindvior;
 import jp.l1j.server.packets.server.S_ChangeHeading;
 import jp.l1j.server.packets.server.S_ChangeShape;
 import jp.l1j.server.packets.server.S_DoActionGFX;
@@ -1164,6 +1165,7 @@ public class L1NpcInstance extends L1Character {
 		setAgro(template.isAgro());
 		setAgroCoi(template.isAgroCoi());
 		setAgroSosc(template.isAgroSosc());
+		setThroughArea(template.getThroughArea());//範囲有効判定
 		setTempCharGfx(template.getGfxId());
 		setGfxId(template.getGfxId());
 		if (template.getRandomExp() == 0) {
@@ -2034,6 +2036,17 @@ public class L1NpcInstance extends L1Character {
 	public void setAgroSosc(boolean flag) {
 		_Agrososc = flag;
 	}
+
+	private boolean _Througharea; //●範囲魔法有効判定
+
+	public boolean isThroughArea() {
+		return _Througharea;
+	}
+
+	public void setThroughArea(boolean flag) {
+		_Througharea = flag;
+	}
+
 
 	private int _homeX; // ● ホームポイントＸ（モンスターの戻る位置とかペットの警戒位置）
 

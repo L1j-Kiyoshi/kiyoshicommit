@@ -24,6 +24,7 @@ CREATE TABLE `npcs` (
   `resist_water` int(10) NOT NULL DEFAULT '0',
   `resist_wind` int(10) NOT NULL DEFAULT '0',
   `resist_light` int(10) NOT NULL DEFAULT '0',
+  `through_area` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `exp` int(10) unsigned NOT NULL DEFAULT '0',
   `lawful` int(10) NOT NULL DEFAULT '0',
   `size` varchar(10) DEFAULT NULL,

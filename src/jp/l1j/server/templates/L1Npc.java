@@ -15,8 +15,8 @@
 
 package jp.l1j.server.templates;
 
-import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.L1Object;
+import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.utils.ReflectionUtil;
 
 public class L1Npc extends L1Object implements Cloneable {
@@ -217,6 +217,10 @@ public class L1Npc extends L1Object implements Cloneable {
 		_resistLight = i;
 	}
 
+	public void setResistArea(int i) {
+		_resistLight = i;
+	}
+
 	private int _exp;
 
 	public int getExp() {
@@ -325,6 +329,16 @@ public class L1Npc extends L1Object implements Cloneable {
 
 	public void setAgro(boolean flag) {
 		_agro = flag;
+	}
+
+	private boolean _throughtArea; // 範囲有効判定
+
+	public boolean getThroughArea() {
+		return _throughtArea;
+	}
+
+	public void setThroughArea(boolean flag) {
+		_throughtArea = flag;
 	}
 
 	private int _gfxId;

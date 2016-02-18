@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.templates.L1Npc;
 import jp.l1j.server.utils.L1DatabaseFactory;
@@ -102,6 +103,7 @@ public class NpcTable {
 				npc.setResistWater(rs.getInt("resist_water"));
 				npc.setResistWind(rs.getInt("resist_wind"));
 				npc.setResistLight(rs.getInt("resist_light"));
+				npc.setThroughArea(rs.getBoolean("through_area")); //範囲有効判定
 				npc.setExp(rs.getInt("exp"));
 				npc.setLawful(rs.getInt("lawful"));
 				npc.setSize(rs.getString("size"));
