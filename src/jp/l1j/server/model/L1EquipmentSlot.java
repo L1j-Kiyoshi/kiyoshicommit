@@ -31,10 +31,9 @@ import jp.l1j.server.packets.server.S_AddSkill;
 import jp.l1j.server.packets.server.S_DelSkill;
 import jp.l1j.server.packets.server.S_Invis;
 import jp.l1j.server.packets.server.S_RemoveObject;
-import jp.l1j.server.packets.server.S_SpMr;
 import jp.l1j.server.packets.server.S_SkillBrave;
 import jp.l1j.server.packets.server.S_SkillHaste;
-import jp.l1j.server.packets.server.S_SystemMessage;
+import jp.l1j.server.packets.server.S_SpMr;
 import jp.l1j.server.templates.L1ArmorSets;
 import jp.l1j.server.templates.L1Item;
 
@@ -176,6 +175,10 @@ public class L1EquipmentSlot {
 			_owner.setSkillEffect(EARRING_OF_ROOMTIS_RED, 0);
 			_owner.setRedEarringChance(armor.getEnchantLevel() - 3);
 		}
+		if (itemId == 21376 && armor.getEnchantLevel() >= 5) { // ルームティス ブラック イアリング
+			_owner.setSkillEffect(EARRING_OF_ROOMTIS_BLACK, 0);
+			_owner.setBlackEarringChance(armor.getEnchantLevel() - 3);
+		}
 	}
 
 	public ArrayList<L1ItemInstance> getArmors() {
@@ -281,6 +284,11 @@ public class L1EquipmentSlot {
 			_owner.removeSkillEffect(EARRING_OF_ROOMTIS_RED);
 			_owner.setRedEarringChance(0);
 		}
+		if (itemId == 21376) { // ルームティス ブラック イアリング
+			_owner.removeSkillEffect(EARRING_OF_ROOMTIS_BLACK);
+			_owner.setBlackEarringChance(0);
+		}
+
 		_armors.remove(armor);
 	}
 

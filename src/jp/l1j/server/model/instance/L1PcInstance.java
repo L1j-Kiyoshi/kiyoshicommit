@@ -15,7 +15,10 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import static jp.l1j.server.packets.server.S_EquipmentWindow.*;
+
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,14 +28,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.codes.ActionCodes;
@@ -42,7 +42,6 @@ import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.datatables.DeathPenaltyTable;
 import jp.l1j.server.datatables.ExpTable;
 import jp.l1j.server.datatables.ItemTable;
-import jp.l1j.server.datatables.MapTimerTable;
 import jp.l1j.server.model.AcceleratorChecker;
 import jp.l1j.server.model.FafurionHydroEffect;
 import jp.l1j.server.model.HalloweenEffect;
@@ -56,7 +55,6 @@ import jp.l1j.server.model.L1DeathMatch;
 import jp.l1j.server.model.L1EquipmentSlot;
 import jp.l1j.server.model.L1ExcludingList;
 import jp.l1j.server.model.L1Karma;
-import jp.l1j.server.model.L1Magic;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1Party;
 import jp.l1j.server.model.L1PartyRefresh;
@@ -79,10 +77,8 @@ import jp.l1j.server.model.monitor.L1PcExpMonitor;
 import jp.l1j.server.model.monitor.L1PcGhostMonitor;
 import jp.l1j.server.model.monitor.L1PcHellMonitor;
 import jp.l1j.server.model.monitor.L1PcInvisDelay;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.model.skill.executor.L1CounterBarrier;
-import jp.l1j.server.model.skill.executor.L1DivineProtectionOfLindvior;
 import jp.l1j.server.packets.PacketOutput;
 import jp.l1j.server.packets.server.S_BlueMessage;
 import jp.l1j.server.packets.server.S_BonusStats;
@@ -4977,7 +4973,7 @@ public class L1PcInstance extends L1Character {
 	}
 
 	public void setTeairorChance(int i) {
-		_teairorChance += i;
+		_teairorChance = i;
 	}
 
 	private int _redEarringChance = 0; // ルームティスレッドイアリング リダクション確率
@@ -4987,9 +4983,16 @@ public class L1PcInstance extends L1Character {
 	}
 
 	public void setRedEarringChance(int i) {
-		_redEarringChance += i;
+		_redEarringChance = i;
 	}
+	private int _blackEarringChance = 0; // ルームティスブラックイアリング 追加ダメージ確率
 
+	public int getBlackEarringChance() {
+		return _blackEarringChance;
+	}
+	public void setBlackEarringChance(int i) {
+		_blackEarringChance = i;
+	}
 	private int _monsterKill = 0; // モンスター討伐数
 
 	public int getMonsterKill() {

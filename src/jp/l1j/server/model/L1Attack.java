@@ -999,6 +999,15 @@ public class L1Attack {
 			}
 		}
 
+		// ルームティスブラックイアリング・発動時のエフェクトは不明
+		if (_pc.hasSkillEffect(EARRING_OF_ROOMTIS_BLACK)) {
+			if (_random.nextInt(100) <= _pc.getBlackEarringChance()) {
+				dmg += 20;
+				_pc.sendPackets(new S_SkillSound(_pc.getId(), 6319));
+				_pc.broadcastPacket(new S_SkillSound(_pc.getId(), 6319));
+			}
+		}
+
 		dmg += getAddDamage(); // 特殊追加ダメージ
 
 		if (_pc.hasSkillEffect(EYES_BREAKER)) { // ＰＣがアイズブレイカ—中。
@@ -1305,6 +1314,15 @@ public class L1Attack {
 			int _damageChance = _random.nextInt(100) + 1;
 			if (_damageChance <= 10) {
 				dmg += 2;
+			}
+		}
+
+		// ルームティスブラックイアリング・発動時のエフェクトは不明
+		if (_pc.hasSkillEffect(EARRING_OF_ROOMTIS_BLACK)) {
+			if (_random.nextInt(100) <= _pc.getBlackEarringChance()) {
+				dmg += 20;
+				_pc.sendPackets(new S_SkillSound(_pc.getId(), 6319));
+				_pc.broadcastPacket(new S_SkillSound(_pc.getId(), 6319));
 			}
 		}
 

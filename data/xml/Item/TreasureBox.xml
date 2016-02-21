@@ -2049,17 +2049,26 @@
     <Item ItemId="21354" Count="1" />
     <Item ItemId="50671" Count="8" />
   </TreasureBox>
+    <!--ルームティス ブラック イアリングボックス-->
+  <TreasureBox Type="SPECIFIC" ItemId="50698">
+    <Item ItemId="21376" Count="1" />
+    <Item ItemId="50671" Count="8" />
+  </TreasureBox>
   <!--ルームティス レッド イアリングボックス(4個セット)-->
   <TreasureBox Type="SPECIFIC" ItemId="50675">
-    <Item ItemId="21352" Count="4" />
+    <Item ItemId="50672" Count="4" />
   </TreasureBox>
   <!--ルームティス ブルー イアリングボックス(4個セット)-->
   <TreasureBox Type="SPECIFIC" ItemId="50676">
-    <Item ItemId="21353" Count="4" />
+    <Item ItemId="50673" Count="4" />
   </TreasureBox>
   <!--ルームティス パープル イアリングボックス(4個セット)-->
   <TreasureBox Type="SPECIFIC" ItemId="50677">
-    <Item ItemId="21354" Count="4" />
+    <Item ItemId="50674" Count="4" />
+  </TreasureBox>
+    <!--ルームティス ブラック イアリングボックス(4個セット)-->
+  <TreasureBox Type="SPECIFIC" ItemId="50699">
+    <Item ItemId="50698" Count="4" />
   </TreasureBox>
   <!--マービンの袋-->
   <TreasureBox Type="SPECIFIC" ItemId="41530" LastItem="true">

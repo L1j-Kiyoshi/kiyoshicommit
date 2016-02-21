@@ -730,6 +730,8 @@ public class L1SkillId {
 
 	public static final int EARRING_OF_ROOMTIS_RED = 9011; // ルームティスレッドイアリング
 
+	public static final int EARRING_OF_ROOMTIS_BLACK = 9012; // ルームティスブラックイアリング
+
 	public static final int CHASER = 9500; // チェイサー
 
 	public static final int CHASER_OF_THEBES = 10146; // テーベチェイサー

@@ -347,6 +347,27 @@ public class L1ItemInstance extends L1Object {
 			}
 		}
 
+		if (getItemId() == 21376 && getEnchantLevel() >= 0) { // ルームティスブラックイアリング
+			if (getEnchantLevel() == 0) {
+				result -= 1;
+			} else if (getEnchantLevel() <= 1) {
+				result -= 2;
+			} else if (getEnchantLevel() <= 2) {
+				result -= 3;
+			} else if (getEnchantLevel() <= 3) {
+				result -= 4;
+			} else if (getEnchantLevel() <= 4) {
+				result -= 5;
+			} else if (getEnchantLevel() <= 5) {
+				result -= 6;
+			} else if (getEnchantLevel() <= 6) {
+				result -= 7;
+			} else if (getEnchantLevel() <= 7) {
+				result -= 8;
+			} else {
+				result -= 9;
+			}
+		}
 		return result;
 	}
 
@@ -731,6 +752,27 @@ public class L1ItemInstance extends L1Object {
 			}
 		}
 
+		if (getItemId() == 21376) { // ルームティスブラックイアリング
+			if (getEnchantLevel() == 0) {
+				result += 0;
+			} else if (getEnchantLevel() <= 1) {
+				result += 0;
+			} else if (getEnchantLevel() <= 2) {
+				result += 0;
+			} else if (getEnchantLevel() <= 3) {
+				result += 1;
+			} else if (getEnchantLevel() <= 4) {
+				result += 1;
+			} else if (getEnchantLevel() <= 5) {
+				result += 2;
+			} else if (getEnchantLevel() <= 6) {
+				result += 3;
+			} else if (getEnchantLevel() <= 7) {
+				result += 4;
+			} else {
+				result += 5;
+			}
+		}
 		return result;
 	}
 
@@ -774,6 +816,28 @@ public class L1ItemInstance extends L1Object {
 			// アクセサリー特級
 			if (_inventoryItem.getEnchantLevel() > 4) {
 				result += Math.min(_inventoryItem.getEnchantLevel() - 4, 4);
+			}
+		}
+
+		if (getItemId() == 21376) { // ルームティスブラックイアリング
+			if (getEnchantLevel() == 0) {
+				result += 0;
+			} else if (getEnchantLevel() <= 1) {
+				result += 0;
+			} else if (getEnchantLevel() <= 2) {
+				result += 0;
+			} else if (getEnchantLevel() <= 3) {
+				result += 1;
+			} else if (getEnchantLevel() <= 4) {
+				result += 1;
+			} else if (getEnchantLevel() <= 5) {
+				result += 2;
+			} else if (getEnchantLevel() <= 6) {
+				result += 3;
+			} else if (getEnchantLevel() <= 7) {
+				result += 4;
+			} else {
+				result += 5;
 			}
 		}
 
