@@ -1059,6 +1059,12 @@ public class L1Attack {
 		if (dmg <= 0 ) { //ダメージが０以下の場合は仰け反りなし
 			_isHit = false;
 		}
+		if (_targetPc.getInventory().getTypeEquipped(2, 13) >= 1) { //ベルトが＋５以上の場合ダメージ軽減
+			int enchantLevel = _targetPc.getInventory().getItemEquipped(2, 13).getEnchantLevel();
+			if (enchantLevel > 4) {
+				dmg -= ((enchantLevel - 4));
+			}
+		}
 		if (_targetPc.hasSkillEffect(SHIELD_OF_TEAIROR)) { // 反逆者のシールド
 			if (_random.nextInt(100) <= _targetPc.getTeairorChance()) {
 				dmg -= 50;
@@ -1553,6 +1559,13 @@ public class L1Attack {
 		}
 		if (dmg <= 0 ) { //ダメージが０以下の場合は仰け反りなし
 			_isHit = false;
+		}
+
+		if (_targetPc.getInventory().getTypeEquipped(2, 13) >= 1) { //ベルトが＋５以上の場合ダメージ軽減
+			int enchantLevel = _targetPc.getInventory().getItemEquipped(2, 13).getEnchantLevel();
+			if (enchantLevel > 4) {
+				dmg -= ((enchantLevel - 4));
+			}
 		}
 
 		// ペット、サモンからプレイヤーに攻撃

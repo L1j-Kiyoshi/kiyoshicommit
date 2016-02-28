@@ -690,6 +690,13 @@ public class L1Magic {
 			dmg -= 2;
 		}
 
+		if (_targetPc.getInventory().getTypeEquipped(2, 13) >= 1) { //ベルトが＋５以上の場合ダメージ軽減
+			int enchantLevel = _targetPc.getInventory().getItemEquipped(2, 13).getEnchantLevel();
+			if (enchantLevel > 4) {
+				dmg -= ((enchantLevel - 4));
+			}
+		}
+
 		if (_calcType == NPC_PC) { // ペット、サモンからプレイヤーに攻撃
 			boolean isNowWar = false;
 			int castleId = L1CastleLocation.getCastleIdByArea(_targetPc);

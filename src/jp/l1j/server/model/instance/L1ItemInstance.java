@@ -331,7 +331,7 @@ public class L1ItemInstance extends L1Object {
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
 				&& _item.getType() <= 13 && _item.getGrade() == 3) {
-			// アクセサリー特級
+			// アクセサリー特級 AC処理
 			if (_inventoryItem.getEnchantLevel() > 1) {
 				result -= Math.min(_inventoryItem.getEnchantLevel() - 1, 3);
 			}
@@ -346,7 +346,6 @@ public class L1ItemInstance extends L1Object {
 				result -= 3;
 			}
 		}
-
 		if (getItemId() == 21376 && getEnchantLevel() >= 0) { // ルームティスブラックイアリング
 			if (getEnchantLevel() == 0) {
 				result -= 1;
@@ -489,7 +488,7 @@ public class L1ItemInstance extends L1Object {
 		_inventoryItem.setInt(_int);
 	}
 
-	public int getHp() {
+	public int getHp() { //HP増加処理
 		int result = _item.getHp() + _inventoryItem.getHp();
 
 		if (getArmorSets() != null) {
@@ -501,12 +500,35 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getHp(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 1) {
-			// アクセサリー中級
-			result += getEnchantLevel() * 2;
+		if (getItemId() == 20420 || getItemId() == 20426 ) {
+			// 旧アクセサリー中級アイテム
+			result += getEnchantLevel() * 2; //強化数 * 2 のHP増加
 		}
 
+		if (_item.getType2() == 2 && _item.getType() >= 10
+				&& _item.getType() <= 13 && _item.getGrade() == 0 ||
+			_item.getType2() == 2 && _item.getType() >= 10
+				&& _item.getType() <= 13 && _item.getGrade() == 1) { //  情熱もしくは根性
+			if (getEnchantLevel() == 0) {
+				result += 0;
+			} else if (getEnchantLevel() <= 1) {
+				result += 5;
+			} else if (getEnchantLevel() <= 2) {
+				result += 10;
+			} else if (getEnchantLevel() <= 3) {
+				result += 20;
+			} else if (getEnchantLevel() <= 4) {
+				result += 30;
+			} else if (getEnchantLevel() <= 5) {
+				result += 40;
+			} else if (getEnchantLevel() <= 6) {
+				result += 40;
+			} else if (getEnchantLevel() <= 7) {
+				result += 50;
+			} else {
+				result += 50;
+			}
+		}
 		if (_item.getType2() == 2 && _item.getType() >= 10
 				&& _item.getType() <= 13 && _item.getGrade() == 3) {
 			// アクセサリー特級
@@ -540,10 +562,8 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getHpr(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0
-				&& getEnchantLevel() >= 6) {
-			// アクセサリー上級 +6以上
+		if (getItemId() == 21377 && getEnchantLevel() >= 6) { //ラプチャーベルト
+			 //旧アクセサリー上級 +6以上
 			if (Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")) {
 				result += 1;
 			} else { // L1J-JP オリジナル仕様
@@ -558,7 +578,7 @@ public class L1ItemInstance extends L1Object {
 		_inventoryItem.setHpr(_hpr);
 	}
 
-	public int getMp() {
+	public int getMp() { //MP増加処理
 		int result = _item.getMp() + _inventoryItem.getMp();
 
 		if (getArmorSets() != null) {
@@ -570,10 +590,33 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getMp(getEnchantLevel());
 		}
 
+		if (getItemId() == 21351) { //コンフラックスサッシュ
+			// 旧アクセサリー下級
+			result += getEnchantLevel();
+		}
+
 		if (_item.getType2() == 2 && _item.getType() >= 10
 				&& _item.getType() <= 13 && _item.getGrade() == 2) {
-			// アクセサリー下級
-			result += getEnchantLevel();
+			// 特性：意地
+			if (getEnchantLevel() == 0) {
+				result += 0;
+			} else if (getEnchantLevel() <= 1) {
+				result += 5;
+			} else if (getEnchantLevel() <= 2) {
+				result += 10;
+			} else if (getEnchantLevel() <= 3) {
+				result += 20;
+			} else if (getEnchantLevel() <= 4) {
+				result += 30;
+			} else if (getEnchantLevel() <= 5) {
+				result += 40;
+			} else if (getEnchantLevel() <= 6) {
+				result += 40;
+			} else if (getEnchantLevel() <= 7) {
+				result += 50;
+			} else {
+				result += 50;
+			}
 		}
 
 		if (_item.getItemId() == 21354) { // ルームティスパープルイアリング
@@ -614,10 +657,8 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getMpr(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0
-				&& getEnchantLevel() >= 6) {
-			// アクセサリー上級 +6以上
+		if (getItemId() == 21377 && getEnchantLevel() >= 6) { //ラプチャーベルト
+			// アクセサリー旧上級 +6以上
 			if (Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")) {
 				result += 1;
 			} else { // L1J-JP オリジナル仕様
@@ -645,12 +686,31 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 2
-				&& getEnchantLevel() >= 6) {
-			// アクセサリー下級 +6以上
+				&& _item.getType() <= 13 && _item.getGrade() == 0) // 特性：情熱
+			if (getEnchantLevel() == 0) {
+				result += 0;
+			} else if (getEnchantLevel() <= 1) {
+				result += 0;
+			} else if (getEnchantLevel() <= 2) {
+				result += 0;
+			} else if (getEnchantLevel() <= 3) {
+				result += 0;
+			} else if (getEnchantLevel() <= 4) {
+				result += 0;
+			} else if (getEnchantLevel() <= 5) {
+				result += 0;
+			} else if (getEnchantLevel() <= 6) {
+				result += 0;
+			} else if (getEnchantLevel() <= 7) {
+				result += 1;
+			} else {
+				result += 2;
+			}
+		if (getItemId() == 21351 && getEnchantLevel() >= 6) {
+			// 旧アクセサリー下級 +6以上
 			if (Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")) {
 				result += 1;
-			} else { // L1J-JP オリジナル仕様
+			}else { // L1J-JP オリジナル仕様
 				result += getEnchantLevel() - 5;
 			}
 		}
@@ -661,11 +721,12 @@ public class L1ItemInstance extends L1Object {
 			}
 		}
 
-		if (_item.getItemId() == 20107 || _item.getItemId() == 120107) { // リッチローブ
+		if (_item.getItemId() == 20107 || _item.getItemId() == 120107) { // リッチローブリニューアル
 		    if (getEnchantLevel() >= 3) {
 		    	result += (getEnchantLevel() - 2);
-		   }
-		  }
+		    }
+		}
+
 
 		return result;
 	}
@@ -686,10 +747,8 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getMr(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 1
-				&& getEnchantLevel() >= 6) {
-			// アクセサリー中級 +6以上
+		if (getItemId() == 20420 || getItemId() == 20426 && getEnchantLevel() >= 6) {
+			// 旧アクセサリー中級 +6以上
 			if (Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")) {
 				result += 1;
 			} else { // L1J-JP オリジナル仕様
@@ -705,7 +764,6 @@ public class L1ItemInstance extends L1Object {
 				result += 13;
 			}
 		}
-
 		return result;
 	}
 
@@ -745,8 +803,10 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 3) {
-			// アクセサリー特級
+				&& _item.getType() <= 13 && _item.getGrade() == 3 ||
+				   _item.getType2() == 2 && _item.getType() >= 10
+				&& _item.getType() <= 13 && _item.getGrade() == 0) {
+			// アクセサリー特級もしくは特性：情熱
 			if (_inventoryItem.getEnchantLevel() > 4) {
 				result += Math.min(_inventoryItem.getEnchantLevel() - 4, 4);
 			}
@@ -812,8 +872,10 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 3) {
-			// アクセサリー特級
+				&& _item.getType() <= 13 && _item.getGrade() == 3 ||
+				   _item.getType2() == 2 && _item.getType() >= 10
+				&& _item.getType() <= 13 && _item.getGrade() == 0) {
+			// アクセサリー特級もしくは特性情熱
 			if (_inventoryItem.getEnchantLevel() > 4) {
 				result += Math.min(_inventoryItem.getEnchantLevel() - 4, 4);
 			}
@@ -840,7 +902,6 @@ public class L1ItemInstance extends L1Object {
 				result += 5;
 			}
 		}
-
 		return result;
 	}
 
@@ -897,9 +958,7 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getDefenseEarth(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) {
-			// アクセサリー上級
+		if (getItemId() == 21377) { //ラプチャーベルト
 			result += getEnchantLevel();
 		}
 
@@ -922,9 +981,7 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getDefenseWater(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) {
-			// アクセサリー上級
+		if (getItemId() == 21377) { //ラプチャーベルト
 			result += getEnchantLevel();
 		}
 
@@ -947,9 +1004,7 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getDefenseFire(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) {
-			// アクセサリー上級
+		if (getItemId() == 21377) { //ラプチャーベルト
 			result += getEnchantLevel();
 		}
 
@@ -972,9 +1027,7 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getDefenseWind(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) {
-			// アクセサリー上級
+		if (getItemId() == 21377) { //ラプチャーベルト
 			result += getEnchantLevel();
 		}
 
@@ -997,9 +1050,7 @@ public class L1ItemInstance extends L1Object {
 			result += bonusItem.getDefenseLight(getEnchantLevel());
 		}
 
-		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) {
-			// アクセサリー上級
+		if (getItemId() == 21377) { //ラプチャーベルト
 			result += getEnchantLevel();
 		}
 
@@ -1184,14 +1235,18 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (getItemId() == 21353 && getEnchantLevel() == 0) { // +0 ルームティス ブルー イアリング 割合回復
-			result += 2;
+				result += 2;
 
 
 
-	} else if (getItemId() == 21353 && getEnchantLevel() > 0) { // ルームティス ブルー イアリング 割合回復
-			result += ((getEnchantLevel() + 1) * 2);
+		} else if (getItemId() == 21353 && getEnchantLevel() > 0) { // ルームティス ブルー イアリング 割合回復
+				result += ((getEnchantLevel() + 1) * 2);
 
-	}
+		}
+		if (_item.getType2() == 2 && _item.getType() >= 10
+				&& _item.getType() <= 13 && _item.getGrade() == 1 && getEnchantLevel() > 4) {//アクセサリー：根性
+				result += ((getEnchantLevel() - 4) * 2);
+			}
 
 		return result;
 	}

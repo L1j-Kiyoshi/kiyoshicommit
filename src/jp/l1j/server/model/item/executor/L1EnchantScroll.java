@@ -14,15 +14,15 @@
  */
 package jp.l1j.server.model.item.executor;
 
-import jp.l1j.configure.Config;
 import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.item.L1ItemId.*;
+import jp.l1j.configure.Config;
 import jp.l1j.server.datatables.EnchantLogTable;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.inventory.L1PcInventory;
 import jp.l1j.server.model.item.L1ItemId;
-import static jp.l1j.server.model.item.L1ItemId.*;
 import jp.l1j.server.packets.server.S_OwnCharStatus;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.packets.server.S_SpMr;
@@ -79,8 +79,18 @@ public class L1EnchantScroll {
 			} else if (10 <= target.getItem().getType() && target.getItem().getType() <= 13) { // 装飾品
 				if (itemId == 50671) { // ルームティスの強化スクロール
 					result = enchantRoomtis(pc, item, target);
+
+				} else if (10 <= target.getItem().getType() && target.getItem().getType() <= 13) {
+					if (itemId == 60005) { // オリムの装飾品魔法スクロール
+						result = enchantAccessoryOfOrim(pc, item, target);
+
+				} else if (10 <= target.getItem().getType() && target.getItem().getType() <= 13) {
+					if (itemId == 160005) { // 祝福されたオリムの装飾品魔法スクロール
+							result = enchantAccessoryOfBlessOrim(pc, item, target);
 				} else {
 					result = enchantAccessory(pc, item, target);
+						}
+					}
 				}
 			}
 		}
@@ -489,7 +499,7 @@ public class L1EnchantScroll {
 				break;
 			}
 			if (dedicatedScrollId == -1) { // -1の場合は装飾品強化で強化可能
-				if (itemId == 49148) {
+				if (itemId == 49148 || itemId == 60005 || itemId == 160005) {
 					isScrollId = true;
 					break;
 				}
@@ -528,6 +538,182 @@ public class L1EnchantScroll {
 		return true;
 	}
 
+	private boolean enchantAccessoryOfOrim(L1PcInstance pc, L1ItemInstance item, L1ItemInstance target) {
+		int itemId = item.getItemId();
+		if (target == null
+				|| target.getItem().getType2() != 2
+				|| target.getItem().getType() < 10
+				|| target.getItem().getType() > 13) {
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		int safe_enchant = target.getItem().getSafeEnchant();
+		if (safe_enchant < 0) { // 強化不可
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		if (target.isSealed()) { // 封印された装備強化不可
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		int enchant_level = target.getEnchantLevel();
+		if (enchant_level >= safe_enchant || enchant_level >= 10) { // 強化上限 はsafe_enchant値で設定
+			pc.sendPackets(new S_ServerMessage(1453)); // \f1これ以上は強化できません。
+			return false;
+		}
+
+		boolean isScrollId = false;
+		for (int dedicatedScrollId : target.getItem().getEnchantScrolls()) {
+			if (itemId == dedicatedScrollId) {
+				isScrollId = true;
+				break;
+			}
+			if (dedicatedScrollId == -1) { // -1の場合は装飾品強化で強化可能
+				if (itemId == 49148 || itemId == 60005 || itemId == 160005) {
+					isScrollId = true;
+					break;
+				}
+			}
+		}
+
+		if (!isScrollId) { // 特定のアイテムでしか強化不可能
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		int rnd = _random.nextInt(100) + 1;
+		int enchant_chance_accessory;
+		if (enchant_level == 0) {
+			enchant_chance_accessory = 70;
+		} else if (enchant_level == 1){
+			enchant_chance_accessory = 60;
+		} else if (enchant_level == 2){
+			enchant_chance_accessory = 60;
+		} else if (enchant_level == 3){
+			enchant_chance_accessory = 50;
+		} else if (enchant_level == 4){
+			enchant_chance_accessory = 25;
+		} else if (enchant_level == 5){
+			enchant_chance_accessory = 5;
+		} else if (enchant_level == 6){
+			enchant_chance_accessory = 4;
+		} else {
+			enchant_chance_accessory = 3;
+		}
+
+		// このアクセサリーの固有倍率
+		enchant_chance_accessory = (int) (enchant_chance_accessory * target.getItem().getOverEnchantRate());
+
+		// サーバーで決められた固定成功率（+%)
+		enchant_chance_accessory += Config.ENCHANT_CHANCE_ACCESSORY;
+
+		if (rnd < enchant_chance_accessory) { // 成功
+			successEnchant(pc, target, 1);
+			pc.getInventory().saveItem(target);
+		} else if (target.isProtected()) { // 保護中
+			protectEnchant(pc, item, target);
+			pc.getInventory().saveItem(target);
+
+		} else if (rnd < (enchant_chance_accessory * 1.3)) { //維持
+			// \f1%0が%2と強烈に%1光りましたが、幸い無事にすみました。
+			pc.sendPackets(new S_ServerMessage(160, target.getLogName(), "$245", "$248"));
+		} else if (rnd > enchant_chance_accessory && (target.getEnchantLevel() == 0)) {
+			// \f1%0が%2と強烈に%1光りましたが、幸い無事にすみました。
+			pc.sendPackets(new S_ServerMessage(160, target.getLogName(), "$245", "$248"));
+		} else { // 失敗
+			successEnchant(pc, target, -1);
+		}
+		return true;
+	}
+
+
+	private boolean enchantAccessoryOfBlessOrim(L1PcInstance pc, L1ItemInstance item, L1ItemInstance target) {
+		int itemId = item.getItemId();
+		if (target == null
+				|| target.getItem().getType2() != 2
+				|| target.getItem().getType() < 10
+				|| target.getItem().getType() > 13) {
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		int safe_enchant = target.getItem().getSafeEnchant();
+		if (safe_enchant < 0) { // 強化不可
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		if (target.isSealed()) { // 封印された装備強化不可
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+
+		int enchant_level = target.getEnchantLevel();
+		if (enchant_level >= safe_enchant || enchant_level >= 10) { // 強化上限 はsafe_enchant値で設定
+			pc.sendPackets(new S_ServerMessage(1453)); // \f1これ以上は強化できません。
+			return false;
+		}
+
+		boolean isScrollId = false;
+		for (int dedicatedScrollId : target.getItem().getEnchantScrolls()) {
+			if (itemId == dedicatedScrollId) {
+				isScrollId = true;
+				break;
+			}
+			if (dedicatedScrollId == -1) { // -1の場合は装飾品強化で強化可能
+				if (itemId == 49148 || itemId == 60005 || itemId == 160005) {
+					isScrollId = true;
+					break;
+				}
+			}
+		}
+
+		if (!isScrollId) { // 特定のアイテムでしか強化不可能
+			pc.sendPackets(new S_ServerMessage(79)); // \f1何も起きませんでした。
+			return false;
+		}
+		int rnd = _random.nextInt(100) + 1;
+		int enchant_chance_accessory;
+		if (enchant_level == 0) {
+			enchant_chance_accessory = 20;
+		} else if (enchant_level == 1){
+			enchant_chance_accessory = 20;
+		} else if (enchant_level == 2){
+			enchant_chance_accessory = 20;
+		} else if (enchant_level == 3){
+			enchant_chance_accessory = 10;
+		} else if (enchant_level == 4){
+			enchant_chance_accessory = 5;
+		} else if (enchant_level == 5){
+			enchant_chance_accessory = 3;
+		} else if (enchant_level == 6){
+			enchant_chance_accessory = 3;
+		} else {
+			enchant_chance_accessory = 2;
+		}
+
+		// このアクセサリーの固有倍率
+		enchant_chance_accessory = (int) (enchant_chance_accessory * target.getItem().getOverEnchantRate());
+
+		// サーバーで決められた固定成功率（+%)
+		enchant_chance_accessory += Config.ENCHANT_CHANCE_ACCESSORY;
+
+		if (rnd < enchant_chance_accessory) { // 成功
+			successEnchant(pc, target, 1);
+			pc.getInventory().saveItem(target);
+		} else if (target.isProtected()) { // 保護中
+			protectEnchant(pc, item, target);
+			pc.getInventory().saveItem(target);
+		} else { // 失敗
+			//pc.getInventory().removeItem(item, 1);
+			pc.sendPackets(new S_ServerMessage(4056, target.getLogName())); // \f1何も起きませんでした。
+		}
+		return true;
+	}
+
 	private boolean enchantRoomtis(L1PcInstance pc, L1ItemInstance item, L1ItemInstance target) {
 		int itemId = item.getItemId();
 		if (target == null
@@ -562,7 +748,7 @@ public class L1EnchantScroll {
 				break;
 			}
 			if (dedicatedScrollId == -1) { // -1の場合は装飾品強化で強化可能
-				if (itemId == 49148) {
+				if (itemId == 49148 || itemId == 60005 || itemId == 160005) {
 					isScrollId = true;
 					break;
 				}
@@ -834,7 +1020,7 @@ public class L1EnchantScroll {
 			if (item.getItem().getType2() == 2
 					&& item.getItem().getType() >= 10
 					&& item.getItem().getType() <= 13) { // アクセサリー
-				if (grade == 0) { // 上級
+				if (item.getId() == 21377) { // 旧上級装備
 					pc.addFire(1);
 					pc.addWater(1);
 					pc.addEarth(1);
@@ -847,7 +1033,7 @@ public class L1EnchantScroll {
 						pc.addHpr(1);
 						pc.addMpr(1);
 					}
-				} else if (grade == 1) { // 中級
+				} else if (item.getId() == 20420 || item.getId() == 20426) { // 旧中級装備
 					pc.addMaxHp(2);
 					pc.sendPackets(new S_OwnCharStatus(pc));
 					if ((Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")
@@ -857,7 +1043,7 @@ public class L1EnchantScroll {
 						pc.addMr(1);
 						pc.sendPackets(new S_SpMr(pc));
 					}
-				} else if (grade == 2) { // 初級
+				} else if (item.getId() == 21351) { // 旧下級装備
 					pc.addMaxMp(1);
 					pc.sendPackets(new S_OwnCharStatus(pc));
 					if ((Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")
