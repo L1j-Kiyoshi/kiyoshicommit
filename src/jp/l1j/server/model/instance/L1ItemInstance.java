@@ -346,27 +346,11 @@ public class L1ItemInstance extends L1Object {
 				result -= 3;
 			}
 		}
-		if (getItemId() == 21376 && getEnchantLevel() >= 0) { // ルームティスブラックイアリング
-			if (getEnchantLevel() == 0) {
-				result -= 1;
-			} else if (getEnchantLevel() <= 1) {
-				result -= 2;
-			} else if (getEnchantLevel() <= 2) {
-				result -= 3;
-			} else if (getEnchantLevel() <= 3) {
-				result -= 4;
-			} else if (getEnchantLevel() <= 4) {
-				result -= 5;
-			} else if (getEnchantLevel() <= 5) {
-				result -= 6;
-			} else if (getEnchantLevel() <= 6) {
-				result -= 7;
-			} else if (getEnchantLevel() <= 7) {
-				result -= 8;
-			} else {
-				result -= 9;
-			}
+			if (getItemId() == 21376 && getEnchantLevel() >= 0) { // ルームティスブラックイアリング
+				result -= getEnchantLevel() + 1;
 		}
+
+
 		return result;
 	}
 
@@ -519,16 +503,13 @@ public class L1ItemInstance extends L1Object {
 				result += 20;
 			} else if (getEnchantLevel() <= 4) {
 				result += 30;
-			} else if (getEnchantLevel() <= 5) {
+			} else if (getEnchantLevel() == 5 && getEnchantLevel() <= 6) {
 				result += 40;
-			} else if (getEnchantLevel() <= 6) {
-				result += 40;
-			} else if (getEnchantLevel() <= 7) {
-				result += 50;
 			} else {
 				result += 50;
 			}
 		}
+
 		if (_item.getType2() == 2 && _item.getType() >= 10
 				&& _item.getType() <= 13 && _item.getGrade() == 3) {
 			// アクセサリー特級
@@ -608,12 +589,8 @@ public class L1ItemInstance extends L1Object {
 				result += 20;
 			} else if (getEnchantLevel() <= 4) {
 				result += 30;
-			} else if (getEnchantLevel() <= 5) {
+			} else if (getEnchantLevel() == 5 && getEnchantLevel() <= 6) {
 				result += 40;
-			} else if (getEnchantLevel() <= 6) {
-				result += 40;
-			} else if (getEnchantLevel() <= 7) {
-				result += 50;
 			} else {
 				result += 50;
 			}
@@ -687,21 +664,9 @@ public class L1ItemInstance extends L1Object {
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
 				&& _item.getType() <= 13 && _item.getGrade() == 0) // 特性：情熱
-			if (getEnchantLevel() == 0) {
+			if (getEnchantLevel() <= 0 && getEnchantLevel() >= 6) {
 				result += 0;
-			} else if (getEnchantLevel() <= 1) {
-				result += 0;
-			} else if (getEnchantLevel() <= 2) {
-				result += 0;
-			} else if (getEnchantLevel() <= 3) {
-				result += 0;
-			} else if (getEnchantLevel() <= 4) {
-				result += 0;
-			} else if (getEnchantLevel() <= 5) {
-				result += 0;
-			} else if (getEnchantLevel() <= 6) {
-				result += 0;
-			} else if (getEnchantLevel() <= 7) {
+			} else if (getEnchantLevel() == 7) {
 				result += 1;
 			} else {
 				result += 2;
@@ -813,21 +778,15 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (getItemId() == 21376) { // ルームティスブラックイアリング
-			if (getEnchantLevel() == 0) {
+			if (getEnchantLevel() <= 0 && getEnchantLevel() >= 2) {
 				result += 0;
-			} else if (getEnchantLevel() <= 1) {
-				result += 0;
-			} else if (getEnchantLevel() <= 2) {
-				result += 0;
-			} else if (getEnchantLevel() <= 3) {
+			} else if (getEnchantLevel() == 3 && getEnchantLevel() == 4) {
 				result += 1;
-			} else if (getEnchantLevel() <= 4) {
-				result += 1;
-			} else if (getEnchantLevel() <= 5) {
+			} else if (getEnchantLevel() == 5) {
 				result += 2;
-			} else if (getEnchantLevel() <= 6) {
+			} else if (getEnchantLevel() == 6) {
 				result += 3;
-			} else if (getEnchantLevel() <= 7) {
+			} else if (getEnchantLevel() == 7) {
 				result += 4;
 			} else {
 				result += 5;
@@ -882,21 +841,15 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (getItemId() == 21376) { // ルームティスブラックイアリング
-			if (getEnchantLevel() == 0) {
+			if (getEnchantLevel() <= 0 && getEnchantLevel() >= 2) {
 				result += 0;
-			} else if (getEnchantLevel() <= 1) {
-				result += 0;
-			} else if (getEnchantLevel() <= 2) {
-				result += 0;
-			} else if (getEnchantLevel() <= 3) {
+			} else if (getEnchantLevel() == 3 && getEnchantLevel() == 4) {
 				result += 1;
-			} else if (getEnchantLevel() <= 4) {
-				result += 1;
-			} else if (getEnchantLevel() <= 5) {
+			} else if (getEnchantLevel() == 5) {
 				result += 2;
-			} else if (getEnchantLevel() <= 6) {
+			} else if (getEnchantLevel() == 6) {
 				result += 3;
-			} else if (getEnchantLevel() <= 7) {
+			} else if (getEnchantLevel() == 7) {
 				result += 4;
 			} else {
 				result += 5;
