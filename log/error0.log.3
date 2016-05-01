@@ -1,0 +1,22 @@
+2 20, 2016 4:08:24 åﬂå„ jp.l1j.server.controller.timer.DistortionOfTimeController run
+èdëÂ: Unable to load DistortionTable.
+java.lang.RuntimeException: Unable to load DistortionTable.
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:52)
+	at jp.l1j.server.datatables.DistortionTable.<init>(DistortionTable.java:32)
+	at jp.l1j.server.datatables.DistortionTable.getInstance(DistortionTable.java:26)
+	at jp.l1j.server.controller.timer.DistortionOfTimeController.run(DistortionOfTimeController.java:89)
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:1102)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:127)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:6592)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:6192)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5058)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5179)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getObject(NewProxyResultSet.java:2166)
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:45)
+	... 3 more
+

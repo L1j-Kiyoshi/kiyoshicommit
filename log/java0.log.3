@@ -1,0 +1,36 @@
+2 20, 2016 4:08:24 午後 jp.l1j.server.utils.IdFactory loadState
+情報: 現在のオブジェクトID: 268478412
+2 20, 2016 4:08:24 午後 jp.l1j.server.controller.timer.DistortionOfTimeController run
+重大: Unable to load DistortionTable.
+java.lang.RuntimeException: Unable to load DistortionTable.
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:52)
+	at jp.l1j.server.datatables.DistortionTable.<init>(DistortionTable.java:32)
+	at jp.l1j.server.datatables.DistortionTable.getInstance(DistortionTable.java:26)
+	at jp.l1j.server.controller.timer.DistortionOfTimeController.run(DistortionOfTimeController.java:89)
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:1102)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:127)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:6592)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:6192)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5058)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5179)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getObject(NewProxyResultSet.java:2166)
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:45)
+	... 3 more
+
+2 20, 2016 4:08:27 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1がサーバーに接続しました。
+2 20, 2016 4:08:29 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1との接続を終了しました。
+2 20, 2016 4:08:31 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1がサーバーに接続しました。
+2 20, 2016 4:08:40 午後 jp.l1j.server.packets.client.C_LoginToServer <init>
+情報: ログインキャラクター: char=Wewe account=73251992 host=127.0.0.1
+2 20, 2016 6:04:42 午後 jp.l1j.server.controller.timer.HomeTownTimeController dailyProc
+情報: ホームタウンシステム: 日時処理
+2 20, 2016 10:04:42 午後 jp.l1j.server.controller.timer.HomeTownTimeController dailyProc
+情報: ホームタウンシステム: 日時処理

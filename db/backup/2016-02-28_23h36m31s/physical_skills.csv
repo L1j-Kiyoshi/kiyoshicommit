@@ -1,0 +1,11 @@
+skill_id,name,type,ranged,action_id,damage_value,damage_dice,damage_dice_count,area,base_left_right,base_front_back,area_front,area_back,area_right,area_left,castgfx,area_effect
+997,アンタラス左手1 (antharas handl1),attack,3,12,100,10,60,0,0,0,1,1,1,3,-1,-1
+998,アンタラス左手2 (antharas handl2),attack,3,12,100,10,90,0,0,0,1,1,1,3,-1,-1
+999,アンタラス右手1 (antharas handr1),attack,3,5,100,15,60,0,0,0,1,1,3,1,-1,-1
+1000,アンタラス右手2 (antharas handr2),attack,3,5,100,42,90,0,0,0,1,1,3,1,-1,-1
+1001,アンタラス首振り1 (antharas neck1),attack,5,1,100,10,60,2,0,0,0,4,2,2,-1,-1
+1002,アンタラス首振り2 (antharas neck2),attack,5,1,100,10,90,2,0,0,0,4,2,2,-1,-1
+1003,アンタラス尻尾1 (antharas tail1),none,4,25,100,20,60,3,4,0,0,0,0,0,-1,-1
+1004,アンタラス尻尾2 (antharas tail2),none,4,25,100,32,90,3,4,0,0,0,0,0,-1,-1
+1040,アンタラスジャンプ1 (antharas jump1),none,12,20,100,13,40,12,0,0,0,0,0,0,-1,-1
+1041,アンタラスジャンプ1 (antharas jump1),none,6,20,100,38,80,6,0,0,0,0,0,0,-1,-1

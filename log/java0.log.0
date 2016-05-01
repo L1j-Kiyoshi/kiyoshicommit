@@ -1,0 +1,58 @@
+3 13, 2016 8:17:29 午後 jp.l1j.server.utils.IdFactory loadState
+情報: 現在のオブジェクトID: 268521392
+3 13, 2016 8:17:29 午後 jp.l1j.server.controller.timer.DistortionOfTimeController run
+重大: Unable to load DistortionTable.
+java.lang.RuntimeException: Unable to load DistortionTable.
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:52)
+	at jp.l1j.server.datatables.DistortionTable.<init>(DistortionTable.java:32)
+	at jp.l1j.server.datatables.DistortionTable.getInstance(DistortionTable.java:26)
+	at jp.l1j.server.controller.timer.DistortionOfTimeController.run(DistortionOfTimeController.java:89)
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:1102)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:127)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:6592)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:6192)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5058)
+	at com.mysql.jdbc.ResultSetImpl.getObject(ResultSetImpl.java:5179)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getObject(NewProxyResultSet.java:2166)
+	at jp.l1j.server.datatables.DistortionTable.load(DistortionTable.java:45)
+	... 3 more
+
+3 13, 2016 8:17:38 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1がサーバーに接続しました。
+3 13, 2016 8:17:40 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1との接続を終了しました。
+3 13, 2016 8:17:43 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1がサーバーに接続しました。
+3 13, 2016 8:17:59 午後 jp.l1j.server.packets.client.C_LoginToServer <init>
+情報: ログインキャラクター: char=We account=73251992 host=127.0.0.1
+3 13, 2016 8:18:12 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .item ブラインドデュアルブレード　1 0 1 を使用しました。
+3 13, 2016 8:18:18 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .item 81 1 0 1 を使用しました。
+3 13, 2016 8:18:23 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .atklog on を使用しました。
+3 13, 2016 8:18:30 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .level 80 を使用しました。
+3 13, 2016 8:18:32 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .ress  を使用しました。
+3 13, 2016 8:18:35 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .speed  を使用しました。
+3 13, 2016 8:18:51 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .setting me lawful -5000 を使用しました。
+3 13, 2016 8:19:10 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .polyme dk を使用しました。
+3 13, 2016 8:19:44 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .setting me lawful 5000 を使用しました。
+3 13, 2016 8:20:15 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .spawn ゴーレム を使用しました。
+3 13, 2016 8:20:20 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .spawn アイアンゴーレム を使用しました。
+3 13, 2016 8:20:40 午後 jp.l1j.server.command.GMCommands executeDatabaseCommand
+情報: We が .spawn ドワーフ を使用しました。
+3 13, 2016 8:45:10 午後 jp.l1j.server.ClientThread run
+情報: 127.0.0.1との接続を終了しました。
