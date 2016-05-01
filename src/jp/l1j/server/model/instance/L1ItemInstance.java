@@ -349,8 +349,6 @@ public class L1ItemInstance extends L1Object {
 			if (getItemId() == 21376 && getEnchantLevel() >= 0) { // ルームティスブラックイアリング
 				result -= getEnchantLevel() + 1;
 		}
-
-
 		return result;
 	}
 

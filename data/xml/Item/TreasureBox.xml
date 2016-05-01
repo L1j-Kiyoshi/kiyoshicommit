@@ -2091,6 +2091,11 @@
   <TreasureBox Type="SPECIFIC" ItemId="41538">
     <Item ItemId="41535" Count="2" /> <!-- 火炎の気 -->
   </TreasureBox>
+    <!--オリムの装飾品魔法スクロール箱-->
+  <TreasureBox Type="RANDOM" ItemId="60006">
+    <Item ItemId="60005" Count="1" Chance="65" /> <!-- オリムの装飾品魔法スクロール -->
+    <Item ItemId="160005" Count="1" Chance="35" /> <!-- 祝福されたオリムの装飾品魔法スクロール -->
+  </TreasureBox>
   <!--封印された歴史書 1章 袋-->
   <TreasureBox Type="SPECIFIC" ItemId="41510">
     <Item ItemId="41011" Count="1" /> <!-- 封印された歴史書1章 -->
