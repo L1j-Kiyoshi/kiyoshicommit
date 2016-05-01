@@ -15,11 +15,13 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_SystemMessage;

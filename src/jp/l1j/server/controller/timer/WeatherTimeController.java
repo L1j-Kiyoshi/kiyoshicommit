@@ -15,9 +15,11 @@
 
 package jp.l1j.server.controller.timer;
 
-import java.util.logging.Logger;
-import jp.l1j.configure.Config;
 import static jp.l1j.locale.I18N.*;
+
+import java.util.logging.Logger;
+
+import jp.l1j.configure.Config;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.packets.server.S_Weather;
 import jp.l1j.server.random.RandomGenerator;

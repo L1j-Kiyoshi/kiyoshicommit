@@ -17,7 +17,6 @@ package jp.l1j.server.packets.server;
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.controller.raid.KukulcanRaidController;
 import jp.l1j.server.controller.raid.ThebesRaidController;
-import jp.l1j.server.controller.timer.DistortionOfTimeController;
 import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.model.npc.L1NpcHtml;
 

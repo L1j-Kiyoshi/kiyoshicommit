@@ -15,6 +15,8 @@
 
 package jp.l1j.server.datatables;
 
+import static jp.l1j.server.codes.ActionCodes.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +24,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.server.codes.ActionCodes.*;
+
 import jp.l1j.server.utils.L1DatabaseFactory;
 import jp.l1j.server.utils.PerformanceTimer;
 import jp.l1j.server.utils.SqlUtil;

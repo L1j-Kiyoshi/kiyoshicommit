@@ -17,10 +17,10 @@ package jp.l1j.server.command.executor;
 
 import java.util.List;
 import java.util.logging.Logger;
+
 import jp.l1j.server.command.L1Commands;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_OutputRawString;
-import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.templates.L1Command;
 
 public class L1CommandHelp implements L1CommandExecutor {

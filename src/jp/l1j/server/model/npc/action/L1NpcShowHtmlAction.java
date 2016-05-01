@@ -15,10 +15,12 @@
 package jp.l1j.server.model.npc.action;
 
 import java.util.ArrayList;
-import jp.l1j.server.model.instance.L1PcInstance;
+
 import jp.l1j.server.model.L1Object;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.npc.L1NpcHtml;
 import jp.l1j.server.utils.IterableElementList;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 

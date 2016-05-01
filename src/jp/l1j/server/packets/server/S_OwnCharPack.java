@@ -15,9 +15,9 @@
 
 package jp.l1j.server.packets.server;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.model.instance.L1PcInstance;
-import static jp.l1j.server.model.skill.L1SkillId.STATUS_THIRD_SPEED;
 
 // TODO コメント翻訳できる方お願いします。
 

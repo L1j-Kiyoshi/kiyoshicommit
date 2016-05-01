@@ -16,6 +16,7 @@
 package jp.l1j.server.model.instance;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.controller.DragonPortalController;
 import jp.l1j.server.datatables.NpcTalkDataTable;

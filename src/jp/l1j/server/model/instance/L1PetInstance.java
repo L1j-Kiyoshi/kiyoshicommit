@@ -15,9 +15,12 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Timer;
+
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.datatables.ExpTable;
 import jp.l1j.server.datatables.PetItemTable;
@@ -29,7 +32,6 @@ import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1PetFoodTimer;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.inventory.L1Inventory;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 import jp.l1j.server.packets.server.S_HpMeter;
 import jp.l1j.server.packets.server.S_NpcChatPacket;

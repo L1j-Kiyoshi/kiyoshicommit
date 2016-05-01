@@ -14,18 +14,17 @@
  */
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.ArrayList;
-import java.util.logging.Logger;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
-import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.instance.L1DoorInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.skill.L1SkillId;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.packets.server.S_ServerMessage;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1HauntedHouse {
 	private static Logger _log = Logger.getLogger(L1HauntedHouse.class

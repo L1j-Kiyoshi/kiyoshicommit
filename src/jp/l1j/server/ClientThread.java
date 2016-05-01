@@ -15,6 +15,8 @@
 
 package jp.l1j.server;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,8 +31,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.controller.LoginController;
 import jp.l1j.server.datatables.CharBuffTable;

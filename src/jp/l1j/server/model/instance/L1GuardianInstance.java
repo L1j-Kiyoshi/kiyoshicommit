@@ -15,11 +15,14 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.codes.ActionCodes;
@@ -30,7 +33,6 @@ import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1World;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_ChangeHeading;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 import jp.l1j.server.packets.server.S_NpcChatPacket;

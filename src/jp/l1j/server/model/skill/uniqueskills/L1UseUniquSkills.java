@@ -2,7 +2,18 @@ package jp.l1j.server.model.skill.uniqueskills;
 
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.model.L1Character;
-import jp.l1j.server.model.skill.uniqueskills.antharas.*;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Kenesi;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1KenesiS;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Musesim;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Musesome;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Nutssim;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Nutssome;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Rirafu;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Ruota;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Saylalaf;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Thisetol;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Tifsim;
+import jp.l1j.server.model.skill.uniqueskills.antharas.L1Tifsome;
 
 public class L1UseUniquSkills {
 

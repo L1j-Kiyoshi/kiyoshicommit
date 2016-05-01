@@ -1,5 +1,6 @@
 package jp.l1j.server.model.skill.executor;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.L1EffectSpawn;
 import jp.l1j.server.model.instance.L1MonsterInstance;
@@ -8,8 +9,6 @@ import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.instance.L1PetInstance;
 import jp.l1j.server.model.instance.L1SummonInstance;
 import jp.l1j.server.packets.server.S_Paralysis;
-
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1StatusStun extends L1BuffSkillExecutorImpl {
 

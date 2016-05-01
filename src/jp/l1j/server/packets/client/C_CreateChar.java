@@ -15,12 +15,13 @@
 
 package jp.l1j.server.packets.client;
 
-import static jp.l1j.locale.I18N.I18N_DOES_NOT_EXIST_ITEM;
+import static jp.l1j.locale.I18N.*;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.datatables.BadNamesTable;

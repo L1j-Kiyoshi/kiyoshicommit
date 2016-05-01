@@ -16,6 +16,7 @@
 package jp.l1j.server.model.instance;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.packets.server.S_Board;
 import jp.l1j.server.packets.server.S_BoardRead;
 import jp.l1j.server.templates.L1Npc;

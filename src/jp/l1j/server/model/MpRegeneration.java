@@ -15,15 +15,15 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.skill.L1SkillId;
-import jp.l1j.server.types.Point;
 import jp.l1j.server.templates.L1MagicDoll;
-import static jp.l1j.server.model.skill.L1SkillId.*;
+import jp.l1j.server.types.Point;
 
 public class MpRegeneration extends TimerTask {
 	private static Logger _log = Logger.getLogger(MpRegeneration.class

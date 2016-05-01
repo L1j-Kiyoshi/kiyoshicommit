@@ -17,6 +17,7 @@ package jp.l1j.server.model.instance;
 
 import java.util.List;
 import java.util.logging.Logger;
+
 import jp.l1j.server.datatables.ClanTable;
 import jp.l1j.server.datatables.DoorTable;
 import jp.l1j.server.model.L1CastleLocation;

@@ -15,10 +15,12 @@
 
 package jp.l1j.server.controller;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.exception.AccountAlreadyLoginException;

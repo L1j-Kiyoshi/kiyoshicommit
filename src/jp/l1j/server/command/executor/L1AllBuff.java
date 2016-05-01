@@ -15,15 +15,17 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.model.L1PolyMorph;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.skill.L1BuffUtil;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.packets.server.S_SystemMessage;

@@ -15,14 +15,16 @@
 
 package jp.l1j.server;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Collection;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.command.GMCommandConfigs;
 import jp.l1j.server.controller.Announcements;
 import jp.l1j.server.controller.AnnouncementsCycle;

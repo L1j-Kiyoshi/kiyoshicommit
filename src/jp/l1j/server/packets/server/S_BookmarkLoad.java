@@ -20,6 +20,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.templates.L1BookMark;

@@ -1,5 +1,6 @@
 package jp.l1j.server.model.skill.executor;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.instance.L1NpcInstance;
@@ -8,7 +9,6 @@ import jp.l1j.server.packets.server.S_SkillSound;
 import jp.l1j.server.random.RandomGenerator;
 import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1Skill;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1EvilTrick implements Runnable {
 

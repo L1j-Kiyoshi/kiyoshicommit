@@ -15,8 +15,11 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
+
 import java.util.Calendar;
 import java.util.logging.Logger;
+
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.controller.DragonPortalController;
 import jp.l1j.server.datatables.MapTable;
@@ -26,8 +29,6 @@ import jp.l1j.server.packets.server.S_PacketBox;
 import jp.l1j.server.packets.server.S_SendLocation;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.utils.L1SpawnUtil;
-
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class C_SendLocation extends ClientBasePacket {
 

@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import jp.l1j.server.codes.ActionCodes;
-import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.inventory.L1Inventory;

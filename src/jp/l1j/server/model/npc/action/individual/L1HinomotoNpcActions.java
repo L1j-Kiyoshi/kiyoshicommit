@@ -1,6 +1,6 @@
 package jp.l1j.server.model.npc.action.individual;
 
-import static jp.l1j.server.model.skill.L1SkillId.BLESS_OF_SAMURAI;
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.configure.Config;
 import jp.l1j.server.datatables.ExpTable;
 import jp.l1j.server.model.L1Object;
@@ -10,7 +10,6 @@ import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.skill.L1BuffUtil;
 import jp.l1j.server.packets.server.S_ServerMessage;
-import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.random.RandomGenerator;
 import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1Npc;

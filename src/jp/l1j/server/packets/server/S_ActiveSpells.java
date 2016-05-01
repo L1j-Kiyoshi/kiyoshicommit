@@ -15,12 +15,13 @@
 
 package jp.l1j.server.packets.server;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.Map;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.model.instance.L1PcInstance;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.utils.ByteArrayUtil;
 import jp.l1j.server.utils.IntRange;
 import jp.l1j.server.utils.collections.Maps;

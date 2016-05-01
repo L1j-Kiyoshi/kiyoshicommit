@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.model.L1TownLocation;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.random.RandomGenerator;

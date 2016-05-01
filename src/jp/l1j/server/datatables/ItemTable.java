@@ -15,6 +15,8 @@
 
 package jp.l1j.server.datatables;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +27,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.templates.L1Armor;

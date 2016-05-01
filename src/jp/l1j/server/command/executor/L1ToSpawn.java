@@ -15,11 +15,13 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.SpawnNpcTable;
 import jp.l1j.server.datatables.SpawnTable;
 import jp.l1j.server.model.L1Spawn;

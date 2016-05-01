@@ -15,14 +15,17 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.controller.timer.FishingTimeController;
@@ -92,7 +95,6 @@ import jp.l1j.server.model.item.executor.L1UnknownMaliceWeapon;
 import jp.l1j.server.model.item.executor.L1WisdomPotion;
 import jp.l1j.server.model.poison.L1DamagePoison;
 import jp.l1j.server.model.skill.L1BuffUtil;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.packets.server.S_CurseBlind;
 import jp.l1j.server.packets.server.S_Fishing;
@@ -111,7 +113,6 @@ import jp.l1j.server.packets.server.S_SkillIconGFX;
 import jp.l1j.server.packets.server.S_SkillSound;
 import jp.l1j.server.packets.server.S_Sound;
 import jp.l1j.server.packets.server.S_SpMr;
-import jp.l1j.server.packets.server.S_Strup;
 import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.random.RandomGenerator;
 import jp.l1j.server.random.RandomGeneratorFactory;

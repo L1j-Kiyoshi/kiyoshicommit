@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.model.trap.L1Trap;
 import jp.l1j.server.storage.TrapStorage;
 import jp.l1j.server.utils.L1DatabaseFactory;

@@ -17,6 +17,7 @@ package jp.l1j.server.model.map;
 
 import java.io.IOException;
 import java.util.Map;
+
 import jp.l1j.configure.Config;
 
 /**

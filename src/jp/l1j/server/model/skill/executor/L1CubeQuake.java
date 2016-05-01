@@ -1,5 +1,7 @@
 package jp.l1j.server.model.skill.executor;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.ArrayList;
 
 import jp.l1j.configure.Config;
@@ -12,8 +14,6 @@ import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_OwnCharAttrDef;
 import jp.l1j.server.packets.server.S_Paralysis;
 import jp.l1j.server.packets.server.S_SkillSound;
-
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1CubeQuake implements Runnable {
 

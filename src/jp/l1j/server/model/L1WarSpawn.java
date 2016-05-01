@@ -17,12 +17,12 @@ package jp.l1j.server.model;
 import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
 
-import jp.l1j.server.utils.IdFactory;
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_NpcPack;
 import jp.l1j.server.templates.L1Npc;
+import jp.l1j.server.utils.IdFactory;
 
 // Referenced classes of package jp.l1j.server.model:
 // L1WarSpawn

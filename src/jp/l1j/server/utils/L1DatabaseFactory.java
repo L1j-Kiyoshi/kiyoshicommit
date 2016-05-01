@@ -14,12 +14,14 @@
  */
 package jp.l1j.server.utils;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * DBへのアクセスするための各種インターフェースを提供する.

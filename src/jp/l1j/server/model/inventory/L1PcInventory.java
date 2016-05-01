@@ -14,38 +14,21 @@
  */
 package jp.l1j.server.model.inventory;
 
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_T;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_BELT;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_BOOTS;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_CLOAK;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_EARRING;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_GLOVE;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_HELM;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_AMULET;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RING1;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RING2;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RING3;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RING4;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RUNE1;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RUNE2;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RUNE3;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RUNE4;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_RUNE5;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_SHIELD;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_ARMOR;
-import static jp.l1j.server.packets.server.S_EquipmentWindow.EQUIPMENT_INDEX_WEAPON;
+import static jp.l1j.server.packets.server.S_EquipmentWindow.*;
+
 import java.text.DecimalFormat;
 import java.util.List;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.datatables.InnKeyTable;
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.datatables.RaceTicketTable;
+import jp.l1j.server.model.L1PolyMorph;
+import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.instance.L1PetInstance;
-import jp.l1j.server.model.L1PolyMorph;
-import jp.l1j.server.model.L1World;
 import jp.l1j.server.model.item.L1ItemId;
 import jp.l1j.server.model.map.L1InstanceMap;
 import jp.l1j.server.packets.server.S_AddItem;

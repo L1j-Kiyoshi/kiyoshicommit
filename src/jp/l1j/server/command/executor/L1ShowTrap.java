@@ -15,12 +15,14 @@
 
 package jp.l1j.server.command.executor;
 
-import java.util.logging.Logger;
 import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
+import java.util.logging.Logger;
+
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.instance.L1TrapInstance;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_RemoveObject;
 import jp.l1j.server.packets.server.S_SystemMessage;
 

@@ -15,6 +15,7 @@
 package jp.l1j.server.model.skill;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.model.L1Character;
 

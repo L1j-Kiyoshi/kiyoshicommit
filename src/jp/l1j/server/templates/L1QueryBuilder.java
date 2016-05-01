@@ -16,6 +16,7 @@
 package jp.l1j.server.templates;
 
 import java.util.List;
+
 import jp.l1j.server.utils.StringUtil;
 import jp.l1j.server.utils.collections.Lists;
 

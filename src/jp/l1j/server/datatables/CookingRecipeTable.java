@@ -17,6 +17,7 @@ package jp.l1j.server.datatables;
 
 import java.util.Map;
 import java.util.logging.Logger;
+
 import jp.l1j.server.templates.L1CookingRecipe;
 import jp.l1j.server.utils.PerformanceTimer;
 import jp.l1j.server.utils.collections.Maps;

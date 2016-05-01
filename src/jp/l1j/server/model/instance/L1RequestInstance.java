@@ -15,6 +15,7 @@
 package jp.l1j.server.model.instance;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.datatables.NpcTalkDataTable;
 import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.packets.server.S_NpcTalkReturn;

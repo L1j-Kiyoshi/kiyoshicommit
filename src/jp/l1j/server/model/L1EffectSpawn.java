@@ -15,21 +15,21 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.lang.reflect.Constructor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import jp.l1j.server.utils.IdFactory;
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.model.instance.L1EffectInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.map.L1Map;
 import jp.l1j.server.model.map.L1WorldMap;
-import jp.l1j.server.model.skill.L1SkillId;
 import jp.l1j.server.packets.server.S_NpcPack;
 import jp.l1j.server.templates.L1Npc;
-import static jp.l1j.server.model.skill.L1SkillId.*;
+import jp.l1j.server.utils.IdFactory;
 
 // Referenced classes of package jp.l1j.server.model:
 // L1EffectSpawn

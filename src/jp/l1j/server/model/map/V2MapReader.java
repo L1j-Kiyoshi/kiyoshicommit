@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.InflaterInputStream;
+
 import jp.l1j.server.datatables.MapTable;
 import jp.l1j.server.utils.BinaryInputStream;
 import jp.l1j.server.utils.FileUtil;

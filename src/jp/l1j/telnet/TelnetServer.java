@@ -18,6 +18,7 @@ package jp.l1j.telnet;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+
 import jp.l1j.configure.Config;
 
 public class TelnetServer {

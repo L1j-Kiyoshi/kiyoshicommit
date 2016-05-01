@@ -1,6 +1,6 @@
 package jp.l1j.server.model.skill.executor;
 
-import static jp.l1j.server.model.skill.L1SkillId.FOG_OF_SLEEPING;
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.instance.L1MonsterInstance;
 import jp.l1j.server.model.instance.L1NpcInstance;

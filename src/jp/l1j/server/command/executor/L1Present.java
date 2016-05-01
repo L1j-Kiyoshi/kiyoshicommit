@@ -15,12 +15,14 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.ItemTable;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_SystemMessage;

@@ -15,20 +15,24 @@
 
 package jp.l1j.server.command;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.model.L1Location;
 import jp.l1j.server.templates.L1ItemSetItem;
 import jp.l1j.server.utils.IterableElementList;
 import jp.l1j.server.utils.PerformanceTimer;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;

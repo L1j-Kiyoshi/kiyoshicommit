@@ -15,6 +15,9 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,8 +27,8 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.controller.timer.WarTimeController;
@@ -34,8 +37,8 @@ import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.datatables.ClanRecommendTable;
 import jp.l1j.server.datatables.MapTimerTable;
 import jp.l1j.server.datatables.RestartLocationTable;
-import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.datatables.ReturnLocationTable;
+import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.model.L1CastleLocation;
 import jp.l1j.server.model.L1Clan;
 import jp.l1j.server.model.L1CurseParalysis;
@@ -51,7 +54,6 @@ import jp.l1j.server.model.poison.L1DamagePoison;
 import jp.l1j.server.model.poison.L1ParalysisPoison;
 import jp.l1j.server.model.poison.L1SilencePoison;
 import jp.l1j.server.model.skill.L1BuffUtil;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillUse;
 import jp.l1j.server.model.skill.executor.L1BuffSkillExecutor;
 import jp.l1j.server.packets.server.S_ActiveSpells;

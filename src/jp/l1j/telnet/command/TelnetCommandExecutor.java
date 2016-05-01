@@ -15,8 +15,9 @@
 
 package jp.l1j.telnet.command;
 
-import java.util.StringTokenizer;
 import static jp.l1j.telnet.command.TelnetCommandResult.*;
+
+import java.util.StringTokenizer;
 
 public class TelnetCommandExecutor {
 	private static TelnetCommandExecutor _instance = new TelnetCommandExecutor();

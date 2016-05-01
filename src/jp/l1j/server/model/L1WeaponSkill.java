@@ -26,13 +26,13 @@ import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.instance.L1PetInstance;
 import jp.l1j.server.model.instance.L1SummonInstance;
 import jp.l1j.server.model.skill.L1SkillUse;
-import jp.l1j.server.random.RandomGenerator;
-import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.packets.server.S_EffectLocation;
 import jp.l1j.server.packets.server.S_Paralysis;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.packets.server.S_SkillSound;
 import jp.l1j.server.packets.server.S_UseAttackSkill;
+import jp.l1j.server.random.RandomGenerator;
+import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1Skill;
 
 // Referenced classes of package jp.l1j.server.model:

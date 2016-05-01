@@ -15,8 +15,8 @@
 package jp.l1j.server.packets.server;
 
 import jp.l1j.server.codes.Opcodes;
-import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.L1Character;
+import jp.l1j.server.model.instance.L1NpcInstance;
 
 public class S_PetCtrlMenu extends ServerBasePacket {
 

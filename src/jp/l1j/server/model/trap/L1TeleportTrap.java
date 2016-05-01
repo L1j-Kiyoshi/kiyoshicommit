@@ -14,10 +14,10 @@
  */
 package jp.l1j.server.model.trap;
 
-import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.L1Location;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1Teleport;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.storage.TrapStorage;
 
 public class L1TeleportTrap extends L1Trap {

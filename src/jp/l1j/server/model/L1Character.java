@@ -15,13 +15,14 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
-import jp.l1j.server.controller.raid.DragonRaid;
 import jp.l1j.server.datatables.SkillTable;
 import jp.l1j.server.model.instance.L1DollInstance;
 import jp.l1j.server.model.instance.L1FollowerInstance;
@@ -32,7 +33,6 @@ import jp.l1j.server.model.instance.L1PetInstance;
 import jp.l1j.server.model.instance.L1SummonInstance;
 import jp.l1j.server.model.inventory.L1Inventory;
 import jp.l1j.server.model.poison.L1Poison;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.L1SkillTimer;
 import jp.l1j.server.model.skill.L1SkillTimerCreator;
 import jp.l1j.server.packets.server.S_Light;

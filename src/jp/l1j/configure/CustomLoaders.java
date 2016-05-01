@@ -16,6 +16,7 @@
 package jp.l1j.configure;
 
 import java.util.Calendar;
+
 import jp.l1j.configure.Annotations.Configure;
 
 class CustomLoaders {

@@ -18,8 +18,8 @@ package jp.l1j.server.model.map;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.datatables.DoorTable;
 import jp.l1j.server.model.Heading;
-import jp.l1j.server.model.instance.L1DoorInstance;
 import jp.l1j.server.model.L1Location;
+import jp.l1j.server.model.instance.L1DoorInstance;
 import jp.l1j.server.types.Point;
 import jp.l1j.server.utils.BinaryUtils;
 

@@ -14,12 +14,11 @@
  */
 package jp.l1j.server.model;
 
-import java.util.logging.Logger;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.inventory.L1PcInventory;
 
 public class L1ExpirationTimer extends TimerTask {
 	private static Logger _log = Logger.getLogger(L1ExpirationTimer.class.getName());

@@ -16,6 +16,7 @@
 package jp.l1j.server.packets.client;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.datatables.NpcActionTable;
 import jp.l1j.server.model.L1Object;

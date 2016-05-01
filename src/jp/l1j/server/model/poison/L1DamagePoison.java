@@ -15,12 +15,14 @@
 package jp.l1j.server.model.poison;
 
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.logging.Logger;
+
 import jp.l1j.server.GeneralThreadPool;
+import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.instance.L1MonsterInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.L1Character;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1DamagePoison extends L1Poison {
 	private static Logger _log = Logger.getLogger(L1DamagePoison.class

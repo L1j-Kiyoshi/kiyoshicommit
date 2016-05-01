@@ -15,6 +15,7 @@
 
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.controller.DragonPortalController;
 import jp.l1j.server.controller.raid.AntharasRaid;
 import jp.l1j.server.controller.raid.DragonRaid;
@@ -23,7 +24,6 @@ import jp.l1j.server.controller.raid.LindviorRaid;
 import jp.l1j.server.datatables.NpcTalkDataTable;
 import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.model.L1Teleport;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_NpcTalkReturn;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.templates.L1Npc;

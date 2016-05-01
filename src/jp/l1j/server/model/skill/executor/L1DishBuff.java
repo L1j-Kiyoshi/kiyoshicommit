@@ -15,9 +15,9 @@
 
 package jp.l1j.server.model.skill.executor;
 
-import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.L1Character;
 import static jp.l1j.server.model.skill.L1SkillId.*;
+import jp.l1j.server.model.L1Character;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_HpUpdate;
 import jp.l1j.server.packets.server.S_MpUpdate;
 import jp.l1j.server.packets.server.S_OwnCharAttrDef;

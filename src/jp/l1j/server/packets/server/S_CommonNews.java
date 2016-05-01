@@ -15,10 +15,13 @@
 
 package jp.l1j.server.packets.server;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 
 // Referenced classes of package jp.l1j.server.serverpackets:

@@ -16,6 +16,7 @@ package jp.l1j.server.model.instance;
 
 import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
+
 import jp.l1j.server.datatables.ItemTable;
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.model.L1Attack;

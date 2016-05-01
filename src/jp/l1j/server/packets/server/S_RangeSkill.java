@@ -17,6 +17,7 @@ package jp.l1j.server.packets.server;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.model.L1Character;
 

@@ -15,10 +15,12 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.datatables.MapTable;

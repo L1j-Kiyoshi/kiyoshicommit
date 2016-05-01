@@ -14,9 +14,9 @@
  */
 package jp.l1j.server.model;
 
-import java.util.logging.Logger;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
 import jp.l1j.server.model.instance.L1ItemInstance;
 

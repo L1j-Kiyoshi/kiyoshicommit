@@ -15,10 +15,12 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.EnumMap;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
-import static jp.l1j.locale.I18N.*;
 import jp.l1j.server.datatables.AcceleratorLogTable;
 import jp.l1j.server.datatables.SprTable;
 import jp.l1j.server.model.instance.L1PcInstance;

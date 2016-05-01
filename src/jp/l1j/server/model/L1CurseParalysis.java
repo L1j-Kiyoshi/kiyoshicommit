@@ -14,13 +14,12 @@
  */
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.model.instance.L1MonsterInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.skill.L1SkillId;
 import jp.l1j.server.packets.server.S_Paralysis;
 import jp.l1j.server.packets.server.S_ServerMessage;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 /*
  * L1ParalysisPoisonと被るコードが多い。特にタイマー。何とか共通化したいが難しい。

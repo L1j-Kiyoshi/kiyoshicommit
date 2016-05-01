@@ -18,7 +18,6 @@ import java.util.logging.Logger;
 
 import jp.l1j.configure.Config;
 import jp.l1j.server.datatables.MapTable;
-import jp.l1j.server.datatables.MapTimerTable;
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.map.L1Map;

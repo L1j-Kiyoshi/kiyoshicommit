@@ -15,8 +15,10 @@
 
 package jp.l1j.server.command.executor;
 
-import java.util.logging.Logger;
 import static jp.l1j.locale.I18N.*;
+
+import java.util.logging.Logger;
+
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.trap.L1WorldTraps;
 import jp.l1j.server.packets.server.S_SystemMessage;

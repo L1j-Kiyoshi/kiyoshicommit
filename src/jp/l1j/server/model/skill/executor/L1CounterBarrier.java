@@ -1,5 +1,6 @@
 package jp.l1j.server.model.skill.executor;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.L1Magic;
@@ -9,7 +10,6 @@ import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_AttackMissPacket;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 import jp.l1j.server.packets.server.S_SkillSound;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 public class L1CounterBarrier {
 

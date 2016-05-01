@@ -22,6 +22,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Logger;
+
 import jp.l1j.server.utils.Base64;
 import jp.l1j.server.utils.IdFactory;
 import jp.l1j.server.utils.L1QueryUtil;

@@ -17,6 +17,7 @@ package jp.l1j.server.utils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
 import jp.l1j.configure.Config;
 
 public class BinaryOutputStream extends OutputStream {

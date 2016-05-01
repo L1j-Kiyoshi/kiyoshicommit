@@ -41,6 +41,7 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.GameServer;
 import jp.l1j.server.utils.L1DatabaseFactory;

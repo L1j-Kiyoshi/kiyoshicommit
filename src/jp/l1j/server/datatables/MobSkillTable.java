@@ -19,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+
 import jp.l1j.server.templates.L1MobSkill;
 import jp.l1j.server.utils.L1QueryUtil;
 import jp.l1j.server.utils.L1QueryUtil.EntityFactory;

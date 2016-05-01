@@ -15,9 +15,10 @@
 
 package jp.l1j.server.model.npc.action;
 
-import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.L1Object;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.npc.L1NpcHtml;
+
 import org.w3c.dom.Element;
 
 public class L1NpcSetQuestAction extends L1NpcXmlAction {

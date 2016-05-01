@@ -22,6 +22,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.templates.L1NpcChat;
 import jp.l1j.server.utils.L1DatabaseFactory;

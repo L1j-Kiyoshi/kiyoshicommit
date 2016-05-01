@@ -17,6 +17,7 @@ package jp.l1j.server.templates;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import jp.l1j.server.utils.IntRange;
 import jp.l1j.server.utils.L1QueryUtil.EntityFactory;
 

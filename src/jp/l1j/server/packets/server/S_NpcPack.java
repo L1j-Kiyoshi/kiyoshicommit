@@ -16,11 +16,12 @@
 package jp.l1j.server.packets.server;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 import jp.l1j.server.datatables.NpcTalkDataTable;
+import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.model.instance.L1FieldObjectInstance;
 import jp.l1j.server.model.instance.L1NpcInstance;
-import jp.l1j.server.model.L1NpcTalkData;
 
 // Referenced classes of package jp.l1j.server.serverpackets:
 // ServerBasePacket

@@ -16,6 +16,7 @@
 package jp.l1j.server.packets.client;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.ClientThread;
 
 // Referenced classes of package jp.l1j.server.clientpackets:

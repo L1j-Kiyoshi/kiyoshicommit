@@ -14,13 +14,11 @@
  */
 package jp.l1j.server.model;
 
-import java.util.logging.Logger;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
-import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.model.instance.L1NpcInstance;
-import jp.l1j.server.packets.server.S_DoActionGFX;
 
 public class L1NpcDeleteTimer extends TimerTask {
 	private static Logger _log = Logger.getLogger(L1NpcDeleteTimer.class

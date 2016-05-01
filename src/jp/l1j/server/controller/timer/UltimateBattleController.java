@@ -1,5 +1,8 @@
 package jp.l1j.server.controller.timer;
 
+import static jp.l1j.locale.I18N.*;
+import static jp.l1j.server.model.item.L1ItemId.*;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.Level;
@@ -31,9 +34,6 @@ import jp.l1j.server.templates.L1SpawnUltimateBattle;
 import jp.l1j.server.templates.L1UltimateBattleConfig;
 import jp.l1j.server.templates.L1UltimateBattleTimes;
 import jp.l1j.server.utils.IdFactory;
-
-import static jp.l1j.locale.I18N.*;
-import static jp.l1j.server.model.item.L1ItemId.*;
 
 public class UltimateBattleController implements Runnable {
 

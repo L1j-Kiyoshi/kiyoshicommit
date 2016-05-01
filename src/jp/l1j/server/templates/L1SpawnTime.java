@@ -17,6 +17,7 @@ package jp.l1j.server.templates;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.logging.Logger;
+
 import jp.l1j.server.utils.TimePeriod;
 
 public class L1SpawnTime {

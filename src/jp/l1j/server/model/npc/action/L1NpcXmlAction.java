@@ -18,11 +18,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.instance.L1NpcInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.npc.L1NpcHtml;
 import jp.l1j.server.utils.IntRange;
+
 import org.w3c.dom.Element;
 
 public abstract class L1NpcXmlAction implements L1NpcAction {

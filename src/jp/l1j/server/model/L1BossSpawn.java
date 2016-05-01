@@ -18,6 +18,7 @@ package jp.l1j.server.model;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.random.RandomGenerator;

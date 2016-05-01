@@ -22,8 +22,8 @@ import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.utils.StreamUtil;
 
 public class BadNamesTable {

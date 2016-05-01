@@ -16,6 +16,7 @@
 package jp.l1j.server.packets.server;
 
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 
 // Referenced classes of package jp.l1j.server.serverpackets:

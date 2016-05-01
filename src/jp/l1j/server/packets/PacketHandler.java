@@ -14,10 +14,12 @@
  */
 package jp.l1j.server.packets;
 
+import static jp.l1j.server.codes.Opcodes.*;
+
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.ClientThread;
-import static jp.l1j.server.codes.Opcodes.*;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.client.C_AddBookmark;
 import jp.l1j.server.packets.client.C_AddBuddy;

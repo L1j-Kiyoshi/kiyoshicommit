@@ -18,6 +18,7 @@ package jp.l1j.server.packets.client;
 import java.nio.ByteBuffer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.ClientThread;
 

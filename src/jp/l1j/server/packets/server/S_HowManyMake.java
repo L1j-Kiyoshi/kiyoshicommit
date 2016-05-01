@@ -15,6 +15,7 @@
 package jp.l1j.server.packets.server;
 
 import java.io.IOException;
+
 import jp.l1j.server.codes.Opcodes;
 
 public class S_HowManyMake extends ServerBasePacket {

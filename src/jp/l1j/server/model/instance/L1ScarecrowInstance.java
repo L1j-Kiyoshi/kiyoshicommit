@@ -16,11 +16,10 @@ package jp.l1j.server.model.instance;
 
 import java.util.ArrayList;
 import java.util.logging.Logger;
+
 import jp.l1j.server.model.L1Attack;
 import jp.l1j.server.model.L1Character;
 import jp.l1j.server.packets.server.S_ChangeHeading;
-import jp.l1j.server.packets.server.S_ServerMessage;
-import jp.l1j.server.packets.server.S_SystemMessage;
 import jp.l1j.server.templates.L1Npc;
 import jp.l1j.server.utils.CalcExp;
 

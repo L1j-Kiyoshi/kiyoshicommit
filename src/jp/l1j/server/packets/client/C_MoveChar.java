@@ -15,15 +15,17 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.server.model.instance.L1PcInstance.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.ClientThread;
-import jp.l1j.server.model.AcceleratorChecker;
 import jp.l1j.server.datatables.DungeonTable;
 import jp.l1j.server.datatables.RandomDungeonTable;
+import jp.l1j.server.model.AcceleratorChecker;
 import jp.l1j.server.model.instance.L1PcInstance;
-import static jp.l1j.server.model.instance.L1PcInstance.REGENSTATE_MOVE;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.trap.L1WorldTraps;
 import jp.l1j.server.packets.server.S_MoveCharPacket;
 import jp.l1j.server.packets.server.S_SystemMessage;

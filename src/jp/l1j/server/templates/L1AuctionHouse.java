@@ -16,10 +16,8 @@
 package jp.l1j.server.templates;
 
 import java.util.Calendar;
-import jp.l1j.server.datatables.CharacterTable;
+
 import jp.l1j.server.datatables.HouseTable;
-import jp.l1j.server.model.L1World;
-import jp.l1j.server.model.instance.L1PcInstance;
 
 public class L1AuctionHouse {
 	public L1AuctionHouse() {

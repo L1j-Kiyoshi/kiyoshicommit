@@ -15,10 +15,12 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.inventory.L1WarehouseInventory;

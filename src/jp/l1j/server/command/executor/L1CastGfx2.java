@@ -15,10 +15,12 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.datatables.SprListTable;
 import jp.l1j.server.model.instance.L1PcInstance;

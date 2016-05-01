@@ -14,12 +14,14 @@
  */
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import jp.l1j.server.model.L1Location;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.map.L1Map;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.trap.L1Trap;
 import jp.l1j.server.packets.server.S_RemoveObject;
 import jp.l1j.server.packets.server.S_Trap;

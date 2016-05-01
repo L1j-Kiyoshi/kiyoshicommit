@@ -1,19 +1,14 @@
 package jp.l1j.server.controller;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
+
 import java.util.HashMap;
 
-import jp.l1j.configure.Config;
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.controller.raid.AntharasRaid;
 import jp.l1j.server.controller.raid.DragonRaid;
 import jp.l1j.server.controller.raid.FafurionRaid;
 import jp.l1j.server.controller.raid.LindviorRaid;
-import jp.l1j.server.datatables.NpcTable;
-import jp.l1j.server.model.L1World;
-import jp.l1j.server.model.instance.L1NpcInstance;
-import jp.l1j.server.utils.IdFactory;
-
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class DragonPortalController {
 

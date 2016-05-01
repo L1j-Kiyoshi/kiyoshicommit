@@ -15,9 +15,11 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.ArrayList;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.ClientThread;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.model.instance.L1ItemInstance;

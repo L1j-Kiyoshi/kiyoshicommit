@@ -15,15 +15,16 @@
 
 package jp.l1j.server.packets.client;
 
+import static jp.l1j.server.codes.ActionCodes.*;
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.logging.Logger;
+
 import jp.l1j.server.ClientThread;
-import static jp.l1j.server.codes.ActionCodes.ACTION_Cheer;
-import static jp.l1j.server.codes.ActionCodes.ACTION_Think;
-import jp.l1j.server.model.instance.L1NpcInstance;
-import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.L1Object;
 import jp.l1j.server.model.L1World;
-import static jp.l1j.server.model.skill.L1SkillId.*;
+import jp.l1j.server.model.instance.L1NpcInstance;
+import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 
 // Referenced classes of package jp.l1j.server.clientpackets:

@@ -25,7 +25,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import jp.l1j.server.datatables.InnTable;
 import jp.l1j.server.model.L1Teleport;
 import jp.l1j.server.model.gametime.L1GameTimeClock;
 import jp.l1j.server.model.instance.L1ItemInstance;

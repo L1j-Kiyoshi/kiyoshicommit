@@ -1,13 +1,12 @@
 package jp.l1j.server.model.npc.action.individual;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
 import jp.l1j.configure.Config;
 import jp.l1j.server.controller.DragonPortalController;
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.templates.L1Npc;
-
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class L1VeilActions {
 

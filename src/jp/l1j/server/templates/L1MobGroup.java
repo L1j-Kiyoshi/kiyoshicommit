@@ -17,6 +17,7 @@ package jp.l1j.server.templates;
 
 import java.util.Collections;
 import java.util.List;
+
 import jp.l1j.server.utils.collections.Lists;
 
 public class L1MobGroup {

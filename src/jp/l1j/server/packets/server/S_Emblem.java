@@ -15,8 +15,12 @@
 
 package jp.l1j.server.packets.server;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.logging.Logger;
+
 import jp.l1j.server.codes.Opcodes;
 
 // Referenced classes of package jp.l1j.server.serverpackets:

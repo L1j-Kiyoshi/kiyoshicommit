@@ -1,5 +1,7 @@
 package jp.l1j.server.controller.raid;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,8 +29,6 @@ import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1Item;
 import jp.l1j.server.templates.L1RaidDrop;
 import jp.l1j.server.utils.IdFactory;
-
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class AntharasRaid extends DragonRaid {
 

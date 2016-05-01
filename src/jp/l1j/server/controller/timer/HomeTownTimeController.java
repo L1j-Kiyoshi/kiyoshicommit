@@ -15,6 +15,8 @@
 
 package jp.l1j.server.controller.timer;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,7 +25,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.datatables.TownTable;
 import jp.l1j.server.model.L1World;

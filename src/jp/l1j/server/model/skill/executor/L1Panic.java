@@ -15,8 +15,8 @@
 
 package jp.l1j.server.model.skill.executor;
 
-import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.L1Character;
+import jp.l1j.server.model.instance.L1PcInstance;
 
 public class L1Panic extends L1BuffSkillExecutorImpl {
 	private static final int STR = 1;

@@ -15,9 +15,11 @@
 
 package jp.l1j.server.command.executor;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.model.L1Teleport;
 import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.model.map.L1WorldMap;

@@ -15,12 +15,13 @@
 
 package jp.l1j.server.packets.server;
 
+import static jp.l1j.server.codes.Opcodes.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static jp.l1j.server.codes.Opcodes.S_OPCODE_PLEDGE_RECOMMENDATION;
 import jp.l1j.server.datatables.CharacterTable;
 import jp.l1j.server.datatables.ClanRecommendTable;
 import jp.l1j.server.model.L1Clan;

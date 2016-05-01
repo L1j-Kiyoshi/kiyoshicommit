@@ -15,10 +15,12 @@
 
 package jp.l1j.server.model;
 
+import static jp.l1j.locale.I18N.*;
+
 import java.math.BigDecimal;
 import java.util.Timer;
 import java.util.TimerTask;
-import static jp.l1j.locale.I18N.*;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.datatables.DoorTable;
 import jp.l1j.server.datatables.NpcTable;

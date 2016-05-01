@@ -15,6 +15,8 @@
 
 package jp.l1j.server.datatables;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,10 +25,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.swing.plaf.TableHeaderUI;
-
 import jp.l1j.server.model.instance.L1PcInstance;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.model.skill.executor.L1BuffSkillExecutor;
 import jp.l1j.server.templates.L1CharacterBuff;
 import jp.l1j.server.templates.L1Skill;

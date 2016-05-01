@@ -1,5 +1,6 @@
 package jp.l1j.server.model.item.executor;
 
+import static jp.l1j.server.controller.raid.L1RaidId.*;
 import jp.l1j.server.controller.DragonPortalController;
 import jp.l1j.server.model.L1CastleLocation;
 import jp.l1j.server.model.L1World;
@@ -8,8 +9,6 @@ import jp.l1j.server.model.instance.L1PcInstance;
 import jp.l1j.server.packets.server.S_DragonGate;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.utils.L1SpawnUtil;
-
-import static jp.l1j.server.controller.raid.L1RaidId.*;
 
 public class L1DragonKey {
 

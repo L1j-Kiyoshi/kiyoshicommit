@@ -26,11 +26,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import jp.l1j.server.datatables.TrapTable;
-import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.instance.L1TrapInstance;
 import jp.l1j.server.model.L1Location;
 import jp.l1j.server.model.L1World;
+import jp.l1j.server.model.instance.L1PcInstance;
+import jp.l1j.server.model.instance.L1TrapInstance;
 import jp.l1j.server.types.Point;
 import jp.l1j.server.utils.IdFactory;
 import jp.l1j.server.utils.L1DatabaseFactory;

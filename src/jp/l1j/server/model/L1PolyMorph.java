@@ -14,6 +14,8 @@
  */
 package jp.l1j.server.model;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -22,13 +24,11 @@ import jp.l1j.server.datatables.PolyTable;
 import jp.l1j.server.model.instance.L1ItemInstance;
 import jp.l1j.server.model.instance.L1MonsterInstance;
 import jp.l1j.server.model.instance.L1PcInstance;
-import jp.l1j.server.model.skill.L1SkillId;
 import jp.l1j.server.packets.server.S_ChangeShape;
 import jp.l1j.server.packets.server.S_CharVisualUpdate;
 import jp.l1j.server.packets.server.S_CloseList;
 import jp.l1j.server.packets.server.S_ServerMessage;
 import jp.l1j.server.packets.server.S_SkillIconGFX;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 
 // Referenced classes of package jp.l1j.server.model:
 // L1PcInstance

@@ -18,7 +18,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Logger;
 
-import jp.l1j.configure.Config;
 import jp.l1j.server.datatables.NpcTalkDataTable;
 import jp.l1j.server.model.L1Attack;
 import jp.l1j.server.model.L1BugBearRace;

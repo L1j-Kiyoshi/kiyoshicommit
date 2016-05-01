@@ -17,6 +17,7 @@ package jp.l1j.server.packets.server;
 
 import java.util.Calendar;
 import java.util.logging.Logger;
+
 import jp.l1j.configure.Config;
 import jp.l1j.server.codes.Opcodes;
 

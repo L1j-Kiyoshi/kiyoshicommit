@@ -14,7 +14,10 @@
  */
 package jp.l1j.server.model.instance;
 
+import static jp.l1j.server.model.skill.L1SkillId.*;
+
 import java.util.logging.Logger;
+
 import jp.l1j.server.GeneralThreadPool;
 import jp.l1j.server.codes.ActionCodes;
 import jp.l1j.server.datatables.NpcTalkDataTable;
@@ -24,7 +27,6 @@ import jp.l1j.server.model.L1Character;
 import jp.l1j.server.model.L1Clan;
 import jp.l1j.server.model.L1NpcTalkData;
 import jp.l1j.server.model.L1World;
-import static jp.l1j.server.model.skill.L1SkillId.*;
 import jp.l1j.server.packets.server.S_DoActionGFX;
 import jp.l1j.server.packets.server.S_NpcTalkReturn;
 import jp.l1j.server.templates.L1Npc;

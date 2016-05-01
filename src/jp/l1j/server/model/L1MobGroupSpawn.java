@@ -18,7 +18,6 @@ package jp.l1j.server.model;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import jp.l1j.server.utils.IdFactory;
 import jp.l1j.server.datatables.MobGroupTable;
 import jp.l1j.server.datatables.NpcTable;
 import jp.l1j.server.model.instance.L1MonsterInstance;
@@ -27,6 +26,7 @@ import jp.l1j.server.random.RandomGenerator;
 import jp.l1j.server.random.RandomGeneratorFactory;
 import jp.l1j.server.templates.L1MobGroup;
 import jp.l1j.server.templates.L1NpcCount;
+import jp.l1j.server.utils.IdFactory;
 
 // Referenced classes of package jp.l1j.server.model:
 // L1MobGroupSpawn

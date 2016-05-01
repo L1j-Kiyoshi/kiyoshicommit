@@ -19,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Logger;
+
 import jp.l1j.server.utils.L1QueryUtil;
 import jp.l1j.server.utils.L1QueryUtil.EntityFactory;
 import jp.l1j.server.utils.collections.Lists;
