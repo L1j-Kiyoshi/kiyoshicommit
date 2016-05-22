@@ -1122,8 +1122,8 @@ public class L1EnchantScroll {
 			target.setEnchantLevel(target.getEnchantLevel()
 					- scroll.getDownLevel(target.getItemId()));
 		}
-
-		pc.sendPackets(new S_ServerMessage(1310));
+		target.setEnchantLevel(target.getEnchantLevel() -1); //失敗時強化数を-1
+			pc.sendPackets(new S_ServerMessage(1310));
 		// 強烈な光りを放ちましたが、装備が蒸発しませんでした。
 		target.setProtected(false);
 		pc.getInventory().updateItem(target, L1PcInventory.COL_ENCHANTLVL);
