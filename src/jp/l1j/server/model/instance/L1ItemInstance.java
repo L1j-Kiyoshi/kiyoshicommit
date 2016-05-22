@@ -501,7 +501,7 @@ public class L1ItemInstance extends L1Object {
 				result += 20;
 			} else if (getEnchantLevel() <= 4) {
 				result += 30;
-			} else if (getEnchantLevel() == 5 && getEnchantLevel() <= 6) {
+			} else if (getEnchantLevel() >= 5 && getEnchantLevel() <= 6) {
 				result += 40;
 			} else {
 				result += 50;
@@ -661,14 +661,15 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		if (_item.getType2() == 2 && _item.getType() >= 10
-				&& _item.getType() <= 13 && _item.getGrade() == 0) // 特性：情熱
-			if (getEnchantLevel() <= 0 && getEnchantLevel() >= 6) {
+				&& _item.getType() <= 13 && _item.getGrade() == 0) {// 特性：情熱
+			if (getEnchantLevel() <= 6) {
 				result += 0;
 			} else if (getEnchantLevel() == 7) {
 				result += 1;
 			} else {
 				result += 2;
 			}
+		}
 		if (getItemId() == 21351 && getEnchantLevel() >= 6) {
 			// 旧アクセサリー下級 +6以上
 			if (Config.ACCESSORY_ENCHANT_BONUS.equalsIgnoreCase("std")) {
