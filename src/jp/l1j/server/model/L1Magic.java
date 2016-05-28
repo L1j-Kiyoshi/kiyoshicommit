@@ -864,7 +864,7 @@ public class L1Magic {
 
 		if (_targetNpc.isThroughArea() && skillId == METEOR_STRIKE   || skillId == FREEZING_BLIZZARD || skillId == FIRE_STORM || //範囲有効判定
 										  skillId == LIGHTNING_STORM || skillId == BLIZZARD			 || skillId == TORNADO 	  ||
-										  skillId == CALL_LIGHTNING  || skillId == EARTH_JAIL 		 || skillId == FIREBALL   ||
+										  skillId == EARTH_JAIL 	 || skillId == FIREBALL   		 ||
 										  skillId == FROZEN_CLOUD    || skillId == LIGHTNING ) {
 			dmg = 0;
 		}
